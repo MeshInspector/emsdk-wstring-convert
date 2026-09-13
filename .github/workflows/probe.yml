@@ -57,3 +57,19 @@ jobs:
           withpch=$?
           set -e
           echo "RESULT_WERROR version=${{ matrix.version }} plain_rc=$plain pch_rc=$withpch (0 = compiles, 1 = rejected)"
+
+      # The one that matters: <locale> first included inside a suppressed region, which is how
+      # MeshLib's PCH reaches it. If this is clean on 4.0.19 and warns on 5.x, the flip is the
+      # libc++ header split moving wstring_convert out of the region that was recorded ignored.
+      - name: Compile through a PCH that suppressed the include
+        run: |
+          FLAGS="-std=gnu++20 -Wall -Wextra -Wdeprecated -Wno-missing-field-initializers -Wno-unknown-pragmas -Wno-sign-compare"
+          IMG=emscripten/emsdk:${{ matrix.version }}-arm64
+          set +e
+          docker run --rm -v "$PWD:/src" -w /src $IMG em++ $FLAGS -x c++-header pch_suppressed.h -o pch_s.h.gch > s1.log 2>&1
+          docker run --rm -v "$PWD:/src" -w /src $IMG em++ $FLAGS -include-pch pch_s.h.gch -c repro.cpp -o /tmp/c.o > s2.log 2>&1
+          rc=$?
+          set -e
+          cat s2.log
+          grep -q "is deprecated" s2.log && W=yes || W=no
+          echo "RESULT_PCH_SUPPRESSED version=${{ matrix.version }} rc=$rc warning=$W"
