@@ -1,0 +1,45 @@
+name: wstring_convert deprecation probe
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  probe:
+    runs-on: ubuntu-24.04-arm
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        version: [ '4.0.19', '4.0.23', '5.0.0', '5.0.4', '5.0.5', '5.0.7', '6.0.0', '6.0.9' ]
+
+    steps:
+      - uses: actions/checkout@v5
+
+      # MeshLib's own emscripten warning flags, verbatim from a failing compile line,
+      # minus the -Werror so every cell reports instead of stopping at the first.
+      - name: Compile
+        run: |
+          FLAGS="-std=gnu++20 -Wall -Wextra -Wdeprecated -Wno-missing-field-initializers -Wno-unknown-pragmas -Wno-sign-compare"
+          IMG=emscripten/emsdk:${{ matrix.version }}-arm64
+          echo "=== $IMG"
+          docker run --rm -v "$PWD:/src" -w /src $IMG em++ --version | head -1
+          set +e
+          docker run --rm -v "$PWD:/src" -w /src $IMG em++ $FLAGS -c repro.cpp -o /tmp/repro.o > out.log 2>&1
+          rc=$?
+          set -e
+          cat out.log
+          grep -q "is deprecated" out.log && W=yes || W=no
+          grep -q "wstring_convert.h\|locale:" out.log && LOC=$(grep -m1 -oE "[^ ]*(wstring_convert\.h|locale):[0-9]+" out.log) || LOC=-
+          echo "RESULT version=${{ matrix.version }} compile_rc=$rc warning=$W at=$LOC"
+
+      - name: Compile with -Werror, as the real build does
+        run: |
+          FLAGS="-std=gnu++20 -Wall -Wextra -Wdeprecated -Wno-missing-field-initializers -Wno-unknown-pragmas -Wno-sign-compare -Werror"
+          IMG=emscripten/emsdk:${{ matrix.version }}-arm64
+          set +e
+          docker run --rm -v "$PWD:/src" -w /src $IMG em++ $FLAGS -c repro.cpp -o /tmp/repro.o > werr.log 2>&1
+          rc=$?
+          set -e
+          grep -q "is deprecated" werr.log && W=yes || W=no
+          echo "RESULT_WERROR version=${{ matrix.version }} rc=$rc (0 = builds clean, 1 = -Werror rejects it) deprecated_seen=$W"
