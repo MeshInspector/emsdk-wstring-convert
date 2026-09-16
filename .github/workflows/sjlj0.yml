@@ -48,13 +48,13 @@ jobs:
             else kind=rc$rc; fi
             echo "RESULT version=$VERSION patch=${PATCH:-none} case=$name rc=$rc kind=$kind"
           }
-          emcc -fexceptions -c a.cpp -O2 -o a.o
-          run A_default_link_closure      emcc a.o -O2 --closure=1 -o a.js
-          run B_longjmp0_link             emcc a.o -O2 -sSUPPORT_LONGJMP=0 -o b.js
-          run C_longjmp0_link_closure     emcc a.o -O2 -sSUPPORT_LONGJMP=0 --closure=1 -o c.js
-          emcc -fexceptions -sSUPPORT_LONGJMP=0 -c a.cpp -O2 -o a0.o
-          run D_longjmp0_both_closure     emcc a0.o -O2 -sSUPPORT_LONGJMP=0 --closure=1 -o d.js
-          run E_longjmp0_link_assertions  emcc a.o -O2 -sSUPPORT_LONGJMP=0 -sASSERTIONS=1 -o e.js
+          em++ -fexceptions -c a.cpp -O2 -o a.o
+          run A_default_link_closure      em++ a.o -O2 --closure=1 -o a.js
+          run B_longjmp0_link             em++ a.o -O2 -sSUPPORT_LONGJMP=0 -o b.js
+          run C_longjmp0_link_closure     em++ a.o -O2 -sSUPPORT_LONGJMP=0 --closure=1 -o c.js
+          em++ -fexceptions -sSUPPORT_LONGJMP=0 -c a.cpp -O2 -o a0.o
+          run D_longjmp0_both_closure     em++ a0.o -O2 -sSUPPORT_LONGJMP=0 --closure=1 -o d.js
+          run E_longjmp0_link_assertions  em++ a.o -O2 -sSUPPORT_LONGJMP=0 -sASSERTIONS=1 -o e.js
           [ -f b.js ] && { echo "::group::b.js invoke/setThrew occurrences"; grep -o "invoke_[a-z]*\|_setThrew\|stackSave" b.js | sort | uniq -c; echo "::endgroup::"; }
           exit 0
           SH
