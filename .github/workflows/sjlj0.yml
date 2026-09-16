@@ -1,0 +1,61 @@
+name: invoke_* imports with -sSUPPORT_LONGJMP=0
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  probe:
+    runs-on: ubuntu-24.04-arm
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - version: '5.0.7'
+            patch: ''
+          - version: '6.0.9'
+            patch: ''
+          - version: '6.0.9'
+            patch: '49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c'   # emscripten#27708 merge commit
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Run the cases
+        run: |
+          IMG=emscripten/emsdk:${{ matrix.version }}-arm64
+          PATCH='${{ matrix.patch }}'
+          cat > run.sh <<'SH'
+          set -u
+          cd /src
+          if [ -n "$PATCH" ]; then
+            curl -sfL "https://github.com/emscripten-core/emscripten/commit/$PATCH.patch" -o /tmp/fix.patch
+            (cd /emsdk/upstream/emscripten && git apply --exclude='test/*' --exclude='ChangeLog.md' /tmp/fix.patch) && echo "PATCH applied: $PATCH" || { echo "PATCH FAILED"; exit 1; }
+            grep -n "SUPPORT_LONGJMP == 'emscripten'" /emsdk/upstream/emscripten/tools/link.py | head -3
+          fi
+          emcc --version | head -1
+          run() { # name, then the command
+            name=$1; shift
+            echo "::group::$name: $*"
+            "$@" > /tmp/$name.log 2>&1; rc=$?
+            cat /tmp/$name.log
+            echo "::endgroup::"
+            if grep -q "JSC_UNDEFINED_VARIABLE" /tmp/$name.log; then kind=closure-undeclared
+            elif grep -qi "AssertionError\|Internal compiler error\|Traceback" /tmp/$name.log; then kind=internal-error
+            elif grep -qi "error:" /tmp/$name.log; then kind=error
+            elif [ $rc -eq 0 ]; then kind=ok
+            else kind=rc$rc; fi
+            echo "RESULT version=$VERSION patch=${PATCH:-none} case=$name rc=$rc kind=$kind"
+          }
+          emcc -fexceptions -c a.cpp -O2 -o a.o
+          run A_default_link_closure      emcc a.o -O2 --closure=1 -o a.js
+          run B_longjmp0_link             emcc a.o -O2 -sSUPPORT_LONGJMP=0 -o b.js
+          run C_longjmp0_link_closure     emcc a.o -O2 -sSUPPORT_LONGJMP=0 --closure=1 -o c.js
+          emcc -fexceptions -sSUPPORT_LONGJMP=0 -c a.cpp -O2 -o a0.o
+          run D_longjmp0_both_closure     emcc a0.o -O2 -sSUPPORT_LONGJMP=0 --closure=1 -o d.js
+          run E_longjmp0_link_assertions  emcc a.o -O2 -sSUPPORT_LONGJMP=0 -sASSERTIONS=1 -o e.js
+          [ -f b.js ] && { echo "::group::b.js invoke/setThrew occurrences"; grep -o "invoke_[a-z]*\|_setThrew\|stackSave" b.js | sort | uniq -c; echo "::endgroup::"; }
+          exit 0
+          SH
+          docker run --rm -e VERSION=${{ matrix.version }} -e PATCH="$PATCH" -v "$PWD:/src" -w /src $IMG bash run.sh
