@@ -32,10 +32,10 @@ jobs:
           MESHLIB="--bind -sMODULARIZE=1 -sEXPORT_NAME=createMeshLib -sEXPORT_ES6=1 -sALLOW_MEMORY_GROWTH=1 -sEXIT_RUNTIME=0 -sINVOKE_RUN=0"
           echo "::group::REPRO"; em++ hello2.cpp -O2 -sEXPORT_ES6=1 --closure=1 -Wall -o r.mjs 2>&1 | head -12; echo "::endgroup::"
           em++ hello2.cpp -O2 -sEXPORT_ES6=1 --closure=1 -Wall -o r.mjs > /tmp/r.log 2>&1
-          echo "RESULT version=$VERSION kinds: $(grep -o '\[JSC_[A-Z_]*\]' /tmp/r.log | sort | uniq -c | tr '
-' ' ')"
+          echo "RESULT version=$VERSION wrong_count=$(grep -c JSC_WRONG_ARGUMENT_COUNT /tmp/r.log) mismatch_count=$(grep -c JSC_TYPE_MISMATCH /tmp/r.log)"
           grep -o "Function [A-Za-z_.0-9]*: called with [0-9]* argument(s)" /tmp/r.log | sort | uniq -c
-          em++ hello2.cpp -O2 -sEXPORT_ES6=1 --closure=1 -Wall -Werror -o r2.mjs > /tmp/r2.log 2>&1; echo "RESULT version=$VERSION werror_rc=$? $(grep -m1 'em++: error' /tmp/r2.log)"
+          em++ hello2.cpp -O2 -sEXPORT_ES6=1 --closure=1 -Wall -Werror -o r2.mjs > /tmp/r2.log 2>&1; rc=$?
+          echo "RESULT version=$VERSION werror_rc=$rc"; grep -m1 "em++: error" /tmp/r2.log
           exit 0
           SH
           docker run --rm -e VERSION=${{ matrix.version }} -v "$PWD:/src" -w /src $IMG bash run.sh
