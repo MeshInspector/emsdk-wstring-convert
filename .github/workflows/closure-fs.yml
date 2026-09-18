@@ -30,12 +30,16 @@ jobs:
           echo "RESULT version=$VERSION case=fsshape rc=$rc wrong_count=$(grep -c JSC_WRONG_ARGUMENT_COUNT /tmp/js.log)"
           run() { name=$1; shift; echo "::group::$name: $*"; "$@" > /tmp/$name.log 2>&1; rc=$?; grep -o "\[JSC_[A-Z_]*\]" /tmp/$name.log | sort | uniq -c; grep -o "Function [A-Za-z_.0-9]*: called with [0-9]* argument(s)" /tmp/$name.log | sort | uniq -c; tail -3 /tmp/$name.log; echo "::endgroup::"; echo "RESULT version=$VERSION case=$name rc=$rc wrong_count=$(grep -c JSC_WRONG_ARGUMENT_COUNT /tmp/$name.log) typed=$(grep -o '[0-9.]*% typed' /tmp/$name.log | tail -1)"; }
           MESHLIB="--bind -sMODULARIZE=1 -sEXPORT_NAME=createMeshLib -sEXPORT_ES6=1 -sALLOW_MEMORY_GROWTH=1 -sEXIT_RUNTIME=0 -sINVOKE_RUN=0"
-          echo "::group::REPRO"; em++ hello2.cpp -O2 -sEXPORT_ES6=1 --closure=1 -Wall -o r.mjs 2>&1 | head -12; echo "::endgroup::"
-          em++ hello2.cpp -O2 -sEXPORT_ES6=1 --closure=1 -Wall -o r.mjs > /tmp/r.log 2>&1
-          echo "RESULT version=$VERSION wrong_count=$(grep -c JSC_WRONG_ARGUMENT_COUNT /tmp/r.log) mismatch_count=$(grep -c JSC_TYPE_MISMATCH /tmp/r.log)"
-          grep -o "Function [A-Za-z_.0-9]*: called with [0-9]* argument(s)" /tmp/r.log | sort | uniq -c
-          em++ hello2.cpp -O2 -sEXPORT_ES6=1 --closure=1 -Wall -Werror -o r2.mjs > /tmp/r2.log 2>&1; rc=$?
-          echo "RESULT version=$VERSION werror_rc=$rc"; grep -m1 "em++: error" /tmp/r2.log
+          CC=/emsdk/upstream/emscripten/node_modules/google-closure-compiler
+          ver() { echo "launcher=$(grep -o '"version": *"[^"]*"' $CC/package.json) java=$(grep -o '"version": *"[^"]*"' $CC-java/package.json 2>/dev/null || echo none) linux=$(grep -o '"version": *"[^"]*"' $CC-linux/package.json 2>/dev/null || echo none) selfreport=$($NODE $CC/cli.js --version 2>&1 | tr '
+' ' ' | cut -c1-120)"; }
+          echo "RESULT version=$VERSION before-swap: $(ver)"
+          em++ hello2.cpp -O2 -sEXPORT_ES6=1 --closure=1 -Wall -o r.mjs > /tmp/r.log 2>&1; echo "RESULT version=$VERSION native wrong_count=$(grep -c JSC_WRONG_ARGUMENT_COUNT /tmp/r.log)"
+          OTHER=20240317.0.0; [ "$VERSION" = "5.0.7" ] && OTHER=20260726.0.0
+          (cd /emsdk/upstream/emscripten && npm install --no-save --no-audit --no-fund google-closure-compiler@$OTHER > /tmp/npm.log 2>&1 || cat /tmp/npm.log)
+          echo "RESULT version=$VERSION after-swap: $(ver)"
+          em++ hello2.cpp -O2 -sEXPORT_ES6=1 --closure=1 -Wall -o x.mjs > /tmp/x.log 2>&1; echo "RESULT version=$VERSION swapped wrong_count=$(grep -c JSC_WRONG_ARGUMENT_COUNT /tmp/x.log) $(grep -o '[0-9.]*% typed' /tmp/x.log | tail -1)"
+          grep -m2 "WARNING - \[JSC" /tmp/x.log | cut -c1-200
           exit 0
           SH
           docker run --rm -e VERSION=${{ matrix.version }} -v "$PWD:/src" -w /src $IMG bash run.sh
