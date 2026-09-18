@@ -1,0 +1,936 @@
+Current runner version: '2.337.0'
+##[group]Runner Image Provisioner
+Hosted Compute Agent
+Version: 20260828.587
+Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+Build Date: 2026-08-28T16:44:25Z
+Worker ID: {08ce8a89-21dc-4519-b7fa-417dba0be760}
+Azure Region: westcentralus
+##[endgroup]
+##[group]Operating System
+Ubuntu
+24.04.5
+LTS
+##[endgroup]
+##[group]Runner Image
+Image: ubuntu-24.04-arm
+Version: 20260907.118.1
+Included Software: https://github.com/actions/runner-images/blob/ubuntu24-arm64/20260907.118/images/ubuntu/Ubuntu2404-Arm64-Readme.md
+Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24-arm64%2F20260907.118
+##[endgroup]
+##[group]GITHUB_TOKEN Permissions
+Actions: write
+ArtifactMetadata: write
+Attestations: write
+Checks: write
+CodeQuality: write
+Contents: write
+CopilotRequests: write
+Deployments: write
+Discussions: write
+Drives: write
+Issues: write
+Metadata: read
+Models: read
+Packages: write
+Pages: write
+PullRequests: write
+RepositoryProjects: write
+SecurityEvents: write
+Statuses: write
+VulnerabilityAlerts: read
+##[endgroup]
+Secret source: Actions
+Cache mode: write
+Prepare workflow directory
+Prepare all required actions
+Getting action download info
+Download action repository 'actions/checkout@v5' (SHA:fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09)
+Complete job name: probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)
+##[group]Run actions/checkout@v5
+with:
+  repository: MeshInspector/emsdk-wstring-convert
+  token: ***
+  ssh-strict: true
+  ssh-user: git
+  persist-credentials: true
+  clean: true
+  sparse-checkout-cone-mode: true
+  fetch-depth: 1
+  fetch-tags: false
+  show-progress: true
+  lfs: false
+  submodules: false
+  set-safe-directory: true
+  allow-unsafe-pr-checkout: false
+##[endgroup]
+Syncing repository: MeshInspector/emsdk-wstring-convert
+##[group]Getting Git version info
+Working directory is '/home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert'
+[command]/usr/bin/git version
+git version 2.55.0
+##[endgroup]
+Temporarily overriding HOME='/home/runner/work/_temp/12d0403a-a4b2-481c-835e-5b8aa4c49d23' before making global git config changes
+Adding repository directory to the temporary git global config as a safe directory
+[command]/usr/bin/git config --global --add safe.directory /home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert
+Deleting the contents of '/home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert'
+##[group]Initializing the repository
+[command]/usr/bin/git init /home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: will change to "main" in Git 3.0. To configure the initial branch name
+hint: to use in all of your new repositories, which will suppress this warning,
+hint: call:
+hint:
+hint: 	git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint: 	git branch -m <name>
+hint:
+hint: Disable this message with "git config set advice.defaultBranchName false"
+Initialized empty Git repository in /home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert/.git/
+[command]/usr/bin/git remote add origin https://github.com/MeshInspector/emsdk-wstring-convert
+##[endgroup]
+##[group]Disabling automatic garbage collection
+[command]/usr/bin/git config --local gc.auto 0
+##[endgroup]
+##[group]Setting up auth
+[command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+[command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+[command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+[command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+[command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+[command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+[command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+##[endgroup]
+##[group]Fetching the repository
+[command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +66234a7084c5eb960d47cdd17cf6e18bf150001d:refs/remotes/origin/sjlj0
+From https://github.com/MeshInspector/emsdk-wstring-convert
+ * [new ref]         66234a7084c5eb960d47cdd17cf6e18bf150001d -> origin/sjlj0
+##[endgroup]
+##[group]Determining the checkout info
+##[endgroup]
+[command]/usr/bin/git sparse-checkout disable
+[command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+##[group]Checking out the ref
+[command]/usr/bin/git checkout --progress --force -B sjlj0 refs/remotes/origin/sjlj0
+Switched to a new branch 'sjlj0'
+branch 'sjlj0' set up to track 'origin/sjlj0'.
+##[endgroup]
+[command]/usr/bin/git log -1 --format=%H
+66234a7084c5eb960d47cdd17cf6e18bf150001d
+##[group]Run IMG=emscripten/emsdk:6.0.9-arm64
+[36;1mIMG=emscripten/emsdk:6.0.9-arm64[0m
+[36;1mPATCH='49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c'[0m
+[36;1mcat > run.sh <<'SH'[0m
+[36;1mset -u[0m
+[36;1mcd /src[0m
+[36;1mif [ -n "$PATCH" ]; then[0m
+[36;1m  curl -sfL "https://github.com/emscripten-core/emscripten/commit/$PATCH.patch" -o /tmp/fix.patch[0m
+[36;1m  (cd /emsdk/upstream/emscripten && git apply --exclude='test/*' --exclude='ChangeLog.md' /tmp/fix.patch) && echo "PATCH applied: $PATCH" || { echo "PATCH FAILED"; exit 1; }[0m
+[36;1m  grep -n "SUPPORT_LONGJMP == 'emscripten'" /emsdk/upstream/emscripten/tools/link.py | head -3[0m
+[36;1mfi[0m
+[36;1memcc --version | head -1[0m
+[36;1mrun() { # name, then the command[0m
+[36;1m  name=$1; shift[0m
+[36;1m  echo "::group::$name: $*"[0m
+[36;1m  "$@" > /tmp/$name.log 2>&1; rc=$?[0m
+[36;1m  cat /tmp/$name.log[0m
+[36;1m  echo "::endgroup::"[0m
+[36;1m  if grep -q "JSC_UNDEFINED_VARIABLE" /tmp/$name.log; then kind=closure-undeclared[0m
+[36;1m  elif grep -qi "AssertionError\|Internal compiler error\|Traceback" /tmp/$name.log; then kind=internal-error[0m
+[36;1m  elif grep -qi "error:" /tmp/$name.log; then kind=error[0m
+[36;1m  elif [ $rc -eq 0 ]; then kind=ok[0m
+[36;1m  else kind=rc$rc; fi[0m
+[36;1m  echo "RESULT version=$VERSION patch=${PATCH:-none} case=$name rc=$rc kind=$kind"[0m
+[36;1m}[0m
+[36;1memcc -fexceptions -c a.cpp -O2 -o a.o[0m
+[36;1mrun A_default_link_closure      emcc a.o -O2 --closure=1 -o a.js[0m
+[36;1mrun B_longjmp0_link             emcc a.o -O2 -sSUPPORT_LONGJMP=0 -o b.js[0m
+[36;1mrun C_longjmp0_link_closure     emcc a.o -O2 -sSUPPORT_LONGJMP=0 --closure=1 -o c.js[0m
+[36;1memcc -fexceptions -sSUPPORT_LONGJMP=0 -c a.cpp -O2 -o a0.o[0m
+[36;1mrun D_longjmp0_both_closure     emcc a0.o -O2 -sSUPPORT_LONGJMP=0 --closure=1 -o d.js[0m
+[36;1mrun E_longjmp0_link_assertions  emcc a.o -O2 -sSUPPORT_LONGJMP=0 -sASSERTIONS=1 -o e.js[0m
+[36;1m[ -f b.js ] && { echo "::group::b.js invoke/setThrew occurrences"; grep -o "invoke_[a-z]*\|_setThrew\|stackSave" b.js | sort | uniq -c; echo "::endgroup::"; }[0m
+[36;1mexit 0[0m
+[36;1mSH[0m
+[36;1mdocker run --rm -e VERSION=6.0.9 -e PATCH="$PATCH" -v "$PWD:/src" -w /src $IMG bash run.sh[0m
+shell: /usr/bin/bash -e {0}
+##[endgroup]
+Unable to find image 'emscripten/emsdk:6.0.9-arm64' locally
+6.0.9-arm64: Pulling from emscripten/emsdk
+0b613318ea87: Pulling fs layer
+d38f376254ce: Pulling fs layer
+bb0683b116f3: Pulling fs layer
+327dfd820399: Pulling fs layer
+327dfd820399: Waiting
+0b613318ea87: Verifying Checksum
+0b613318ea87: Download complete
+327dfd820399: Verifying Checksum
+327dfd820399: Download complete
+bb0683b116f3: Verifying Checksum
+bb0683b116f3: Download complete
+0b613318ea87: Pull complete
+d38f376254ce: Verifying Checksum
+d38f376254ce: Download complete
+d38f376254ce: Pull complete
+bb0683b116f3: Pull complete
+327dfd820399: Pull complete
+Digest: sha256:41039722671531506a7d081828721e9ccde93125d91f88351e0fe4301606c7d4
+Status: Downloaded newer image for emscripten/emsdk:6.0.9-arm64
+PATCH applied: 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c
+1499:  if settings.SUPPORT_LONGJMP == 'emscripten' or not settings.DISABLE_EXCEPTION_CATCHING:
+1726:  if not settings.DISABLE_EXCEPTION_CATCHING or settings.SUPPORT_LONGJMP == 'emscripten':
+emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 6.0.9 (4e4223852a0835923411059a3929907d7df1232e)
+##[group]A_default_link_closure: emcc a.o -O2 --closure=1 -o a.js
+wasm-ld: error: a.o: undefined symbol: std::__2::to_string(int)
+wasm-ld: error: a.o: undefined symbol: operator new(unsigned long)
+wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+wasm-ld: error: a.o: undefined symbol: __resumeException
+wasm-ld: error: a.o: undefined symbol: __cxa_allocate_exception
+wasm-ld: error: a.o: undefined symbol: typeinfo for std::length_error
+wasm-ld: error: a.o: undefined symbol: std::length_error::~length_error()
+wasm-ld: error: a.o: undefined symbol: __cxa_throw
+wasm-ld: error: a.o: undefined symbol: __cxa_free_exception
+wasm-ld: error: a.o: undefined symbol: __resumeException
+wasm-ld: error: a.o: undefined symbol: std::logic_error::logic_error(char const*)
+wasm-ld: error: a.o: undefined symbol: vtable for std::length_error
+emcc: warning: link failed with undefined C++ symbols. Try linking with 'em++' or passing '-sDEFAULT_TO_CXX'
+emcc: error: '/emsdk/upstream/bin/wasm-ld -o a.wasm /tmp/tmpiux_w0hdlibemscripten_js_symbols.so -Bstatic --strip-debug --export=_emscripten_stack_alloc --export=setThrew --export=__wasm_call_ctors --export=emscripten_stack_get_current --export=_emscripten_stack_restore --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_lib_deps --export-if-defined=__stop_em_lib_deps --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=main --export-if-defined=__main_argc_argv --export-table -z stack-size=65536 --no-growable-memory --initial-heap=16777216 --no-entry --no-stack-first --table-base=1 --global-base=1024 a.o -L/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten -L/emsdk/upstream/emscripten/src/lib -lGL-getprocaddr -lal -lhtml5 -lstubs -lnoexit -lc -ldlmalloc -lclang_rt.builtins -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr' failed (returned 1)
+##[endgroup]
+RESULT version=6.0.9 patch=49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c case=A_default_link_closure rc=1 kind=error
+##[group]B_longjmp0_link: emcc a.o -O2 -sSUPPORT_LONGJMP=0 -o b.js
+wasm-ld: error: a.o: undefined symbol: std::__2::to_string(int)
+wasm-ld: error: a.o: undefined symbol: operator new(unsigned long)
+wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+wasm-ld: error: a.o: undefined symbol: __resumeException
+wasm-ld: error: a.o: undefined symbol: __cxa_allocate_exception
+wasm-ld: error: a.o: undefined symbol: typeinfo for std::length_error
+wasm-ld: error: a.o: undefined symbol: std::length_error::~length_error()
+wasm-ld: error: a.o: undefined symbol: __cxa_throw
+wasm-ld: error: a.o: undefined symbol: __cxa_free_exception
+wasm-ld: error: a.o: undefined symbol: __resumeException
+wasm-ld: error: a.o: undefined symbol: std::logic_error::logic_error(char const*)
+wasm-ld: error: a.o: undefined symbol: vtable for std::length_error
+emcc: warning: link failed with undefined C++ symbols. Try linking with 'em++' or passing '-sDEFAULT_TO_CXX'
+emcc: error: '/emsdk/upstream/bin/wasm-ld -o b.wasm /tmp/tmpbeyoo9mklibemscripten_js_symbols.so -Bstatic --strip-debug --export=_emscripten_stack_alloc --export=__wasm_call_ctors --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_lib_deps --export-if-defined=__stop_em_lib_deps --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=main --export-if-defined=__main_argc_argv --export-table -z stack-size=65536 --no-growable-memory --initial-heap=16777216 --no-entry --no-stack-first --table-base=1 --global-base=1024 a.o -L/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten -L/emsdk/upstream/emscripten/src/lib -lGL-getprocaddr -lal -lhtml5 -lstubs -lnoexit -lc -ldlmalloc -lclang_rt.builtins -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -disable-lsr' failed (returned 1)
+##[endgroup]
+RESULT version=6.0.9 patch=49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c case=B_longjmp0_link rc=1 kind=error
+##[group]C_longjmp0_link_closure: emcc a.o -O2 -sSUPPORT_LONGJMP=0 --closure=1 -o c.js
+wasm-ld: error: a.o: undefined symbol: std::__2::to_string(int)
+wasm-ld: error: a.o: undefined symbol: operator new(unsigned long)
+wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+wasm-ld: error: a.o: undefined symbol: __resumeException
+wasm-ld: error: a.o: undefined symbol: __cxa_allocate_exception
+wasm-ld: error: a.o: undefined symbol: typeinfo for std::length_error
+wasm-ld: error: a.o: undefined symbol: std::length_error::~length_error()
+wasm-ld: error: a.o: undefined symbol: __cxa_throw
+wasm-ld: error: a.o: undefined symbol: __cxa_free_exception
+wasm-ld: error: a.o: undefined symbol: __resumeException
+wasm-ld: error: a.o: undefined symbol: std::logic_error::logic_error(char const*)
+wasm-ld: error: a.o: undefined symbol: vtable for std::length_error
+emcc: warning: link failed with undefined C++ symbols. Try linking with 'em++' or passing '-sDEFAULT_TO_CXX'
+emcc: error: '/emsdk/upstream/bin/wasm-ld -o c.wasm /tmp/tmpc3ltjdtylibemscripten_js_symbols.so -Bstatic --strip-debug --export=_emscripten_stack_alloc --export=__wasm_call_ctors --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_lib_deps --export-if-defined=__stop_em_lib_deps --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=main --export-if-defined=__main_argc_argv --export-table -z stack-size=65536 --no-growable-memory --initial-heap=16777216 --no-entry --no-stack-first --table-base=1 --global-base=1024 a.o -L/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten -L/emsdk/upstream/emscripten/src/lib -lGL-getprocaddr -lal -lhtml5 -lstubs -lnoexit -lc -ldlmalloc -lclang_rt.builtins -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -disable-lsr' failed (returned 1)
+##[endgroup]
+RESULT version=6.0.9 patch=49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c case=C_longjmp0_link_closure rc=1 kind=error
+##[group]D_longjmp0_both_closure: emcc a0.o -O2 -sSUPPORT_LONGJMP=0 --closure=1 -o d.js
+wasm-ld: error: a0.o: undefined symbol: std::__2::to_string(int)
+wasm-ld: error: a0.o: undefined symbol: operator new(unsigned long)
+wasm-ld: error: a0.o: undefined symbol: operator delete(void*, unsigned long)
+wasm-ld: error: a0.o: undefined symbol: operator delete(void*, unsigned long)
+wasm-ld: error: a0.o: undefined symbol: operator delete(void*, unsigned long)
+wasm-ld: error: a0.o: undefined symbol: __resumeException
+wasm-ld: error: a0.o: undefined symbol: __cxa_allocate_exception
+wasm-ld: error: a0.o: undefined symbol: typeinfo for std::length_error
+wasm-ld: error: a0.o: undefined symbol: std::length_error::~length_error()
+wasm-ld: error: a0.o: undefined symbol: __cxa_throw
+wasm-ld: error: a0.o: undefined symbol: __cxa_free_exception
+wasm-ld: error: a0.o: undefined symbol: __resumeException
+wasm-ld: error: a0.o: undefined symbol: std::logic_error::logic_error(char const*)
+wasm-ld: error: a0.o: undefined symbol: vtable for std::length_error
+emcc: warning: link failed with undefined C++ symbols. Try linking with 'em++' or passing '-sDEFAULT_TO_CXX'
+emcc: error: '/emsdk/upstream/bin/wasm-ld -o d.wasm /tmp/tmp_7cgvro_libemscripten_js_symbols.so -Bstatic --strip-debug --export=_emscripten_stack_alloc --export=__wasm_call_ctors --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_lib_deps --export-if-defined=__stop_em_lib_deps --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=main --export-if-defined=__main_argc_argv --export-table -z stack-size=65536 --no-growable-memory --initial-heap=16777216 --no-entry --no-stack-first --table-base=1 --global-base=1024 a0.o -L/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten -L/emsdk/upstream/emscripten/src/lib -lGL-getprocaddr -lal -lhtml5 -lstubs -lnoexit -lc -ldlmalloc -lclang_rt.builtins -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -disable-lsr' failed (returned 1)
+##[endgroup]
+RESULT version=6.0.9 patch=49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c case=D_longjmp0_both_closure rc=1 kind=error
+##[group]E_longjmp0_link_assertions: emcc a.o -O2 -sSUPPORT_LONGJMP=0 -sASSERTIONS=1 -o e.js
+wasm-ld: error: a.o: undefined symbol: std::__2::to_string(int)
+wasm-ld: error: a.o: undefined symbol: operator new(unsigned long)
+wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+wasm-ld: error: a.o: undefined symbol: __resumeException
+wasm-ld: error: a.o: undefined symbol: __cxa_allocate_exception
+wasm-ld: error: a.o: undefined symbol: typeinfo for std::length_error
+wasm-ld: error: a.o: undefined symbol: std::length_error::~length_error()
+wasm-ld: error: a.o: undefined symbol: __cxa_throw
+wasm-ld: error: a.o: undefined symbol: __cxa_free_exception
+wasm-ld: error: a.o: undefined symbol: __resumeException
+wasm-ld: error: a.o: undefined symbol: std::logic_error::logic_error(char const*)
+wasm-ld: error: a.o: undefined symbol: vtable for std::length_error
+emcc: warning: link failed with undefined C++ symbols. Try linking with 'em++' or passing '-sDEFAULT_TO_CXX'
+emcc: error: '/emsdk/upstream/bin/wasm-ld -o e.wasm /tmp/tmphhy38_f2libemscripten_js_symbols.so -Bstatic --strip-debug --export=emscripten_stack_get_end --export=emscripten_stack_get_free --export=emscripten_stack_get_base --export=emscripten_stack_get_current --export=emscripten_stack_init --export=_emscripten_stack_alloc --export=__wasm_call_ctors --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_lib_deps --export-if-defined=__stop_em_lib_deps --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=main --export-if-defined=__main_argc_argv --export-if-defined=fflush --export-table -z stack-size=65536 --no-growable-memory --initial-heap=16777216 --no-entry --no-stack-first --table-base=1 --global-base=1024 a.o -L/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten -L/emsdk/upstream/emscripten/src/lib -lGL-getprocaddr -lal -lhtml5 -lstubs-debug -lnoexit -lc-debug -ldlmalloc-debug -lclang_rt.builtins -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -disable-lsr' failed (returned 1)
+##[endgroup]
+RESULT version=6.0.9 patch=49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c case=E_longjmp0_link_assertions rc=1 kind=error
+Post job cleanup.
+[command]/usr/bin/git version
+git version 2.55.0
+Temporarily overriding HOME='/home/runner/work/_temp/0a551141-4343-44a3-a3cf-d170ab72573e' before making global git config changes
+Adding repository directory to the temporary git global config as a safe directory
+[command]/usr/bin/git config --global --add safe.directory /home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert
+[command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+[command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+[command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+http.https://github.com/.extraheader
+[command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+[command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+[command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+[command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Cleaning up orphan processes
+Current runner version: '2.337.0'
+##[group]Runner Image Provisioner
+Hosted Compute Agent
+Version: 20260828.587
+Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+Build Date: 2026-08-28T16:44:25Z
+Worker ID: {296684e1-8ad3-46b3-982f-49e3c8769756}
+Azure Region: northcentralus
+##[endgroup]
+##[group]Operating System
+Ubuntu
+24.04.5
+LTS
+##[endgroup]
+##[group]Runner Image
+Image: ubuntu-24.04-arm
+Version: 20260907.118.1
+Included Software: https://github.com/actions/runner-images/blob/ubuntu24-arm64/20260907.118/images/ubuntu/Ubuntu2404-Arm64-Readme.md
+Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24-arm64%2F20260907.118
+##[endgroup]
+##[group]GITHUB_TOKEN Permissions
+Actions: write
+ArtifactMetadata: write
+Attestations: write
+Checks: write
+CodeQuality: write
+Contents: write
+CopilotRequests: write
+Deployments: write
+Discussions: write
+Drives: write
+Issues: write
+Metadata: read
+Models: read
+Packages: write
+Pages: write
+PullRequests: write
+RepositoryProjects: write
+SecurityEvents: write
+Statuses: write
+VulnerabilityAlerts: read
+##[endgroup]
+Secret source: Actions
+Cache mode: write
+Prepare workflow directory
+Prepare all required actions
+Getting action download info
+Download action repository 'actions/checkout@v5' (SHA:fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09)
+Complete job name: probe (6.0.9)
+##[group]Run actions/checkout@v5
+with:
+  repository: MeshInspector/emsdk-wstring-convert
+  token: ***
+  ssh-strict: true
+  ssh-user: git
+  persist-credentials: true
+  clean: true
+  sparse-checkout-cone-mode: true
+  fetch-depth: 1
+  fetch-tags: false
+  show-progress: true
+  lfs: false
+  submodules: false
+  set-safe-directory: true
+  allow-unsafe-pr-checkout: false
+##[endgroup]
+Syncing repository: MeshInspector/emsdk-wstring-convert
+##[group]Getting Git version info
+Working directory is '/home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert'
+[command]/usr/bin/git version
+git version 2.55.0
+##[endgroup]
+Temporarily overriding HOME='/home/runner/work/_temp/eedc1a44-8c62-493a-8b0f-1c11375f965d' before making global git config changes
+Adding repository directory to the temporary git global config as a safe directory
+[command]/usr/bin/git config --global --add safe.directory /home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert
+Deleting the contents of '/home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert'
+##[group]Initializing the repository
+[command]/usr/bin/git init /home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: will change to "main" in Git 3.0. To configure the initial branch name
+hint: to use in all of your new repositories, which will suppress this warning,
+hint: call:
+hint:
+hint: 	git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint: 	git branch -m <name>
+hint:
+hint: Disable this message with "git config set advice.defaultBranchName false"
+Initialized empty Git repository in /home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert/.git/
+[command]/usr/bin/git remote add origin https://github.com/MeshInspector/emsdk-wstring-convert
+##[endgroup]
+##[group]Disabling automatic garbage collection
+[command]/usr/bin/git config --local gc.auto 0
+##[endgroup]
+##[group]Setting up auth
+[command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+[command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+[command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+[command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+[command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+[command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+[command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+##[endgroup]
+##[group]Fetching the repository
+[command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +66234a7084c5eb960d47cdd17cf6e18bf150001d:refs/remotes/origin/sjlj0
+From https://github.com/MeshInspector/emsdk-wstring-convert
+ * [new ref]         66234a7084c5eb960d47cdd17cf6e18bf150001d -> origin/sjlj0
+##[endgroup]
+##[group]Determining the checkout info
+##[endgroup]
+[command]/usr/bin/git sparse-checkout disable
+[command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+##[group]Checking out the ref
+[command]/usr/bin/git checkout --progress --force -B sjlj0 refs/remotes/origin/sjlj0
+Switched to a new branch 'sjlj0'
+branch 'sjlj0' set up to track 'origin/sjlj0'.
+##[endgroup]
+[command]/usr/bin/git log -1 --format=%H
+66234a7084c5eb960d47cdd17cf6e18bf150001d
+##[group]Run IMG=emscripten/emsdk:6.0.9-arm64
+[36;1mIMG=emscripten/emsdk:6.0.9-arm64[0m
+[36;1mPATCH=''[0m
+[36;1mcat > run.sh <<'SH'[0m
+[36;1mset -u[0m
+[36;1mcd /src[0m
+[36;1mif [ -n "$PATCH" ]; then[0m
+[36;1m  curl -sfL "https://github.com/emscripten-core/emscripten/commit/$PATCH.patch" -o /tmp/fix.patch[0m
+[36;1m  (cd /emsdk/upstream/emscripten && git apply --exclude='test/*' --exclude='ChangeLog.md' /tmp/fix.patch) && echo "PATCH applied: $PATCH" || { echo "PATCH FAILED"; exit 1; }[0m
+[36;1m  grep -n "SUPPORT_LONGJMP == 'emscripten'" /emsdk/upstream/emscripten/tools/link.py | head -3[0m
+[36;1mfi[0m
+[36;1memcc --version | head -1[0m
+[36;1mrun() { # name, then the command[0m
+[36;1m  name=$1; shift[0m
+[36;1m  echo "::group::$name: $*"[0m
+[36;1m  "$@" > /tmp/$name.log 2>&1; rc=$?[0m
+[36;1m  cat /tmp/$name.log[0m
+[36;1m  echo "::endgroup::"[0m
+[36;1m  if grep -q "JSC_UNDEFINED_VARIABLE" /tmp/$name.log; then kind=closure-undeclared[0m
+[36;1m  elif grep -qi "AssertionError\|Internal compiler error\|Traceback" /tmp/$name.log; then kind=internal-error[0m
+[36;1m  elif grep -qi "error:" /tmp/$name.log; then kind=error[0m
+[36;1m  elif [ $rc -eq 0 ]; then kind=ok[0m
+[36;1m  else kind=rc$rc; fi[0m
+[36;1m  echo "RESULT version=$VERSION patch=${PATCH:-none} case=$name rc=$rc kind=$kind"[0m
+[36;1m}[0m
+[36;1memcc -fexceptions -c a.cpp -O2 -o a.o[0m
+[36;1mrun A_default_link_closure      emcc a.o -O2 --closure=1 -o a.js[0m
+[36;1mrun B_longjmp0_link             emcc a.o -O2 -sSUPPORT_LONGJMP=0 -o b.js[0m
+[36;1mrun C_longjmp0_link_closure     emcc a.o -O2 -sSUPPORT_LONGJMP=0 --closure=1 -o c.js[0m
+[36;1memcc -fexceptions -sSUPPORT_LONGJMP=0 -c a.cpp -O2 -o a0.o[0m
+[36;1mrun D_longjmp0_both_closure     emcc a0.o -O2 -sSUPPORT_LONGJMP=0 --closure=1 -o d.js[0m
+[36;1mrun E_longjmp0_link_assertions  emcc a.o -O2 -sSUPPORT_LONGJMP=0 -sASSERTIONS=1 -o e.js[0m
+[36;1m[ -f b.js ] && { echo "::group::b.js invoke/setThrew occurrences"; grep -o "invoke_[a-z]*\|_setThrew\|stackSave" b.js | sort | uniq -c; echo "::endgroup::"; }[0m
+[36;1mexit 0[0m
+[36;1mSH[0m
+[36;1mdocker run --rm -e VERSION=6.0.9 -e PATCH="$PATCH" -v "$PWD:/src" -w /src $IMG bash run.sh[0m
+shell: /usr/bin/bash -e {0}
+##[endgroup]
+Unable to find image 'emscripten/emsdk:6.0.9-arm64' locally
+6.0.9-arm64: Pulling from emscripten/emsdk
+0b613318ea87: Pulling fs layer
+d38f376254ce: Pulling fs layer
+bb0683b116f3: Pulling fs layer
+327dfd820399: Pulling fs layer
+327dfd820399: Waiting
+0b613318ea87: Verifying Checksum
+0b613318ea87: Download complete
+327dfd820399: Verifying Checksum
+327dfd820399: Download complete
+bb0683b116f3: Verifying Checksum
+bb0683b116f3: Download complete
+0b613318ea87: Pull complete
+d38f376254ce: Verifying Checksum
+d38f376254ce: Download complete
+d38f376254ce: Pull complete
+bb0683b116f3: Pull complete
+327dfd820399: Pull complete
+Digest: sha256:41039722671531506a7d081828721e9ccde93125d91f88351e0fe4301606c7d4
+Status: Downloaded newer image for emscripten/emsdk:6.0.9-arm64
+emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 6.0.9 (4e4223852a0835923411059a3929907d7df1232e)
+##[group]A_default_link_closure: emcc a.o -O2 --closure=1 -o a.js
+wasm-ld: error: a.o: undefined symbol: std::__2::to_string(int)
+wasm-ld: error: a.o: undefined symbol: operator new(unsigned long)
+wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+wasm-ld: error: a.o: undefined symbol: __resumeException
+wasm-ld: error: a.o: undefined symbol: __cxa_allocate_exception
+wasm-ld: error: a.o: undefined symbol: typeinfo for std::length_error
+wasm-ld: error: a.o: undefined symbol: std::length_error::~length_error()
+wasm-ld: error: a.o: undefined symbol: __cxa_throw
+wasm-ld: error: a.o: undefined symbol: __cxa_free_exception
+wasm-ld: error: a.o: undefined symbol: __resumeException
+wasm-ld: error: a.o: undefined symbol: std::logic_error::logic_error(char const*)
+wasm-ld: error: a.o: undefined symbol: vtable for std::length_error
+emcc: warning: link failed with undefined C++ symbols. Try linking with 'em++' or passing '-sDEFAULT_TO_CXX'
+emcc: error: '/emsdk/upstream/bin/wasm-ld -o a.wasm /tmp/tmp8xcitjp3libemscripten_js_symbols.so -Bstatic --strip-debug --export=_emscripten_stack_alloc --export=__wasm_call_ctors --export=emscripten_stack_get_current --export=_emscripten_stack_restore --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_lib_deps --export-if-defined=__stop_em_lib_deps --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=main --export-if-defined=__main_argc_argv --export-table -z stack-size=65536 --no-growable-memory --initial-heap=16777216 --no-entry --no-stack-first --table-base=1 --global-base=1024 a.o -L/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten -L/emsdk/upstream/emscripten/src/lib -lGL-getprocaddr -lal -lhtml5 -lstubs -lnoexit -lc -ldlmalloc -lclang_rt.builtins -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr' failed (returned 1)
+##[endgroup]
+RESULT version=6.0.9 patch=none case=A_default_link_closure rc=1 kind=error
+##[group]B_longjmp0_link: emcc a.o -O2 -sSUPPORT_LONGJMP=0 -o b.js
+wasm-ld: error: a.o: undefined symbol: std::__2::to_string(int)
+wasm-ld: error: a.o: undefined symbol: operator new(unsigned long)
+wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+wasm-ld: error: a.o: undefined symbol: __resumeException
+wasm-ld: error: a.o: undefined symbol: __cxa_allocate_exception
+wasm-ld: error: a.o: undefined symbol: typeinfo for std::length_error
+wasm-ld: error: a.o: undefined symbol: std::length_error::~length_error()
+wasm-ld: error: a.o: undefined symbol: __cxa_throw
+wasm-ld: error: a.o: undefined symbol: __cxa_free_exception
+wasm-ld: error: a.o: undefined symbol: __resumeException
+wasm-ld: error: a.o: undefined symbol: std::logic_error::logic_error(char const*)
+wasm-ld: error: a.o: undefined symbol: vtable for std::length_error
+emcc: warning: link failed with undefined C++ symbols. Try linking with 'em++' or passing '-sDEFAULT_TO_CXX'
+emcc: error: '/emsdk/upstream/bin/wasm-ld -o b.wasm /tmp/tmpqu7a4opplibemscripten_js_symbols.so -Bstatic --strip-debug --export=_emscripten_stack_alloc --export=__wasm_call_ctors --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_lib_deps --export-if-defined=__stop_em_lib_deps --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=main --export-if-defined=__main_argc_argv --export-table -z stack-size=65536 --no-growable-memory --initial-heap=16777216 --no-entry --no-stack-first --table-base=1 --global-base=1024 a.o -L/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten -L/emsdk/upstream/emscripten/src/lib -lGL-getprocaddr -lal -lhtml5 -lstubs -lnoexit -lc -ldlmalloc -lclang_rt.builtins -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -disable-lsr' failed (returned 1)
+##[endgroup]
+RESULT version=6.0.9 patch=none case=B_longjmp0_link rc=1 kind=error
+##[group]C_longjmp0_link_closure: emcc a.o -O2 -sSUPPORT_LONGJMP=0 --closure=1 -o c.js
+wasm-ld: error: a.o: undefined symbol: std::__2::to_string(int)
+wasm-ld: error: a.o: undefined symbol: operator new(unsigned long)
+wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+wasm-ld: error: a.o: undefined symbol: __resumeException
+wasm-ld: error: a.o: undefined symbol: __cxa_allocate_exception
+wasm-ld: error: a.o: undefined symbol: typeinfo for std::length_error
+wasm-ld: error: a.o: undefined symbol: std::length_error::~length_error()
+wasm-ld: error: a.o: undefined symbol: __cxa_throw
+wasm-ld: error: a.o: undefined symbol: __cxa_free_exception
+wasm-ld: error: a.o: undefined symbol: __resumeException
+wasm-ld: error: a.o: undefined symbol: std::logic_error::logic_error(char const*)
+wasm-ld: error: a.o: undefined symbol: vtable for std::length_error
+emcc: warning: link failed with undefined C++ symbols. Try linking with 'em++' or passing '-sDEFAULT_TO_CXX'
+emcc: error: '/emsdk/upstream/bin/wasm-ld -o c.wasm /tmp/tmparblsjfjlibemscripten_js_symbols.so -Bstatic --strip-debug --export=_emscripten_stack_alloc --export=__wasm_call_ctors --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_lib_deps --export-if-defined=__stop_em_lib_deps --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=main --export-if-defined=__main_argc_argv --export-table -z stack-size=65536 --no-growable-memory --initial-heap=16777216 --no-entry --no-stack-first --table-base=1 --global-base=1024 a.o -L/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten -L/emsdk/upstream/emscripten/src/lib -lGL-getprocaddr -lal -lhtml5 -lstubs -lnoexit -lc -ldlmalloc -lclang_rt.builtins -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -disable-lsr' failed (returned 1)
+##[endgroup]
+RESULT version=6.0.9 patch=none case=C_longjmp0_link_closure rc=1 kind=error
+##[group]D_longjmp0_both_closure: emcc a0.o -O2 -sSUPPORT_LONGJMP=0 --closure=1 -o d.js
+wasm-ld: error: a0.o: undefined symbol: std::__2::to_string(int)
+wasm-ld: error: a0.o: undefined symbol: operator new(unsigned long)
+wasm-ld: error: a0.o: undefined symbol: operator delete(void*, unsigned long)
+wasm-ld: error: a0.o: undefined symbol: operator delete(void*, unsigned long)
+wasm-ld: error: a0.o: undefined symbol: operator delete(void*, unsigned long)
+wasm-ld: error: a0.o: undefined symbol: __resumeException
+wasm-ld: error: a0.o: undefined symbol: __cxa_allocate_exception
+wasm-ld: error: a0.o: undefined symbol: typeinfo for std::length_error
+wasm-ld: error: a0.o: undefined symbol: std::length_error::~length_error()
+wasm-ld: error: a0.o: undefined symbol: __cxa_throw
+wasm-ld: error: a0.o: undefined symbol: __cxa_free_exception
+wasm-ld: error: a0.o: undefined symbol: __resumeException
+wasm-ld: error: a0.o: undefined symbol: std::logic_error::logic_error(char const*)
+wasm-ld: error: a0.o: undefined symbol: vtable for std::length_error
+emcc: warning: link failed with undefined C++ symbols. Try linking with 'em++' or passing '-sDEFAULT_TO_CXX'
+emcc: error: '/emsdk/upstream/bin/wasm-ld -o d.wasm /tmp/tmpczp5_d_0libemscripten_js_symbols.so -Bstatic --strip-debug --export=_emscripten_stack_alloc --export=__wasm_call_ctors --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_lib_deps --export-if-defined=__stop_em_lib_deps --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=main --export-if-defined=__main_argc_argv --export-table -z stack-size=65536 --no-growable-memory --initial-heap=16777216 --no-entry --no-stack-first --table-base=1 --global-base=1024 a0.o -L/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten -L/emsdk/upstream/emscripten/src/lib -lGL-getprocaddr -lal -lhtml5 -lstubs -lnoexit -lc -ldlmalloc -lclang_rt.builtins -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -disable-lsr' failed (returned 1)
+##[endgroup]
+RESULT version=6.0.9 patch=none case=D_longjmp0_both_closure rc=1 kind=error
+##[group]E_longjmp0_link_assertions: emcc a.o -O2 -sSUPPORT_LONGJMP=0 -sASSERTIONS=1 -o e.js
+wasm-ld: error: a.o: undefined symbol: std::__2::to_string(int)
+wasm-ld: error: a.o: undefined symbol: operator new(unsigned long)
+wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+wasm-ld: error: a.o: undefined symbol: __resumeException
+wasm-ld: error: a.o: undefined symbol: __cxa_allocate_exception
+wasm-ld: error: a.o: undefined symbol: typeinfo for std::length_error
+wasm-ld: error: a.o: undefined symbol: std::length_error::~length_error()
+wasm-ld: error: a.o: undefined symbol: __cxa_throw
+wasm-ld: error: a.o: undefined symbol: __cxa_free_exception
+wasm-ld: error: a.o: undefined symbol: __resumeException
+wasm-ld: error: a.o: undefined symbol: std::logic_error::logic_error(char const*)
+wasm-ld: error: a.o: undefined symbol: vtable for std::length_error
+emcc: warning: link failed with undefined C++ symbols. Try linking with 'em++' or passing '-sDEFAULT_TO_CXX'
+emcc: error: '/emsdk/upstream/bin/wasm-ld -o e.wasm /tmp/tmp3b5v2z00libemscripten_js_symbols.so -Bstatic --strip-debug --export=emscripten_stack_get_end --export=emscripten_stack_get_free --export=emscripten_stack_get_base --export=emscripten_stack_get_current --export=emscripten_stack_init --export=_emscripten_stack_alloc --export=__wasm_call_ctors --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_lib_deps --export-if-defined=__stop_em_lib_deps --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=main --export-if-defined=__main_argc_argv --export-if-defined=fflush --export-table -z stack-size=65536 --no-growable-memory --initial-heap=16777216 --no-entry --no-stack-first --table-base=1 --global-base=1024 a.o -L/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten -L/emsdk/upstream/emscripten/src/lib -lGL-getprocaddr -lal -lhtml5 -lstubs-debug -lnoexit -lc-debug -ldlmalloc-debug -lclang_rt.builtins -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -disable-lsr' failed (returned 1)
+##[endgroup]
+RESULT version=6.0.9 patch=none case=E_longjmp0_link_assertions rc=1 kind=error
+Post job cleanup.
+[command]/usr/bin/git version
+git version 2.55.0
+Temporarily overriding HOME='/home/runner/work/_temp/8d2eaa3a-e5fd-4b99-808f-1b8135d9fe5f' before making global git config changes
+Adding repository directory to the temporary git global config as a safe directory
+[command]/usr/bin/git config --global --add safe.directory /home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert
+[command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+[command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+[command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+http.https://github.com/.extraheader
+[command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+[command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+[command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+[command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Cleaning up orphan processes
+Current runner version: '2.337.0'
+##[group]Runner Image Provisioner
+Hosted Compute Agent
+Version: 20260828.587
+Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+Build Date: 2026-08-28T16:44:25Z
+Worker ID: {520521d2-3978-440e-a83e-bd23a3194fee}
+Azure Region: westus3
+##[endgroup]
+##[group]Operating System
+Ubuntu
+24.04.5
+LTS
+##[endgroup]
+##[group]Runner Image
+Image: ubuntu-24.04-arm
+Version: 20260907.118.1
+Included Software: https://github.com/actions/runner-images/blob/ubuntu24-arm64/20260907.118/images/ubuntu/Ubuntu2404-Arm64-Readme.md
+Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24-arm64%2F20260907.118
+##[endgroup]
+##[group]GITHUB_TOKEN Permissions
+Actions: write
+ArtifactMetadata: write
+Attestations: write
+Checks: write
+CodeQuality: write
+Contents: write
+CopilotRequests: write
+Deployments: write
+Discussions: write
+Drives: write
+Issues: write
+Metadata: read
+Models: read
+Packages: write
+Pages: write
+PullRequests: write
+RepositoryProjects: write
+SecurityEvents: write
+Statuses: write
+VulnerabilityAlerts: read
+##[endgroup]
+Secret source: Actions
+Cache mode: write
+Prepare workflow directory
+Prepare all required actions
+Getting action download info
+Download action repository 'actions/checkout@v5' (SHA:fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09)
+Complete job name: probe (5.0.7)
+##[group]Run actions/checkout@v5
+with:
+  repository: MeshInspector/emsdk-wstring-convert
+  token: ***
+  ssh-strict: true
+  ssh-user: git
+  persist-credentials: true
+  clean: true
+  sparse-checkout-cone-mode: true
+  fetch-depth: 1
+  fetch-tags: false
+  show-progress: true
+  lfs: false
+  submodules: false
+  set-safe-directory: true
+  allow-unsafe-pr-checkout: false
+##[endgroup]
+Syncing repository: MeshInspector/emsdk-wstring-convert
+##[group]Getting Git version info
+Working directory is '/home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert'
+[command]/usr/bin/git version
+git version 2.55.0
+##[endgroup]
+Temporarily overriding HOME='/home/runner/work/_temp/060012a6-a64b-4a93-85b4-4ac682b79658' before making global git config changes
+Adding repository directory to the temporary git global config as a safe directory
+[command]/usr/bin/git config --global --add safe.directory /home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert
+Deleting the contents of '/home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert'
+##[group]Initializing the repository
+[command]/usr/bin/git init /home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: will change to "main" in Git 3.0. To configure the initial branch name
+hint: to use in all of your new repositories, which will suppress this warning,
+hint: call:
+hint:
+hint: 	git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint: 	git branch -m <name>
+hint:
+hint: Disable this message with "git config set advice.defaultBranchName false"
+Initialized empty Git repository in /home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert/.git/
+[command]/usr/bin/git remote add origin https://github.com/MeshInspector/emsdk-wstring-convert
+##[endgroup]
+##[group]Disabling automatic garbage collection
+[command]/usr/bin/git config --local gc.auto 0
+##[endgroup]
+##[group]Setting up auth
+[command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+[command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+[command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+[command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+[command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+[command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+[command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+##[endgroup]
+##[group]Fetching the repository
+[command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +66234a7084c5eb960d47cdd17cf6e18bf150001d:refs/remotes/origin/sjlj0
+From https://github.com/MeshInspector/emsdk-wstring-convert
+ * [new ref]         66234a7084c5eb960d47cdd17cf6e18bf150001d -> origin/sjlj0
+##[endgroup]
+##[group]Determining the checkout info
+##[endgroup]
+[command]/usr/bin/git sparse-checkout disable
+[command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+##[group]Checking out the ref
+[command]/usr/bin/git checkout --progress --force -B sjlj0 refs/remotes/origin/sjlj0
+Switched to a new branch 'sjlj0'
+branch 'sjlj0' set up to track 'origin/sjlj0'.
+##[endgroup]
+[command]/usr/bin/git log -1 --format=%H
+66234a7084c5eb960d47cdd17cf6e18bf150001d
+##[group]Run IMG=emscripten/emsdk:5.0.7-arm64
+[36;1mIMG=emscripten/emsdk:5.0.7-arm64[0m
+[36;1mPATCH=''[0m
+[36;1mcat > run.sh <<'SH'[0m
+[36;1mset -u[0m
+[36;1mcd /src[0m
+[36;1mif [ -n "$PATCH" ]; then[0m
+[36;1m  curl -sfL "https://github.com/emscripten-core/emscripten/commit/$PATCH.patch" -o /tmp/fix.patch[0m
+[36;1m  (cd /emsdk/upstream/emscripten && git apply --exclude='test/*' --exclude='ChangeLog.md' /tmp/fix.patch) && echo "PATCH applied: $PATCH" || { echo "PATCH FAILED"; exit 1; }[0m
+[36;1m  grep -n "SUPPORT_LONGJMP == 'emscripten'" /emsdk/upstream/emscripten/tools/link.py | head -3[0m
+[36;1mfi[0m
+[36;1memcc --version | head -1[0m
+[36;1mrun() { # name, then the command[0m
+[36;1m  name=$1; shift[0m
+[36;1m  echo "::group::$name: $*"[0m
+[36;1m  "$@" > /tmp/$name.log 2>&1; rc=$?[0m
+[36;1m  cat /tmp/$name.log[0m
+[36;1m  echo "::endgroup::"[0m
+[36;1m  if grep -q "JSC_UNDEFINED_VARIABLE" /tmp/$name.log; then kind=closure-undeclared[0m
+[36;1m  elif grep -qi "AssertionError\|Internal compiler error\|Traceback" /tmp/$name.log; then kind=internal-error[0m
+[36;1m  elif grep -qi "error:" /tmp/$name.log; then kind=error[0m
+[36;1m  elif [ $rc -eq 0 ]; then kind=ok[0m
+[36;1m  else kind=rc$rc; fi[0m
+[36;1m  echo "RESULT version=$VERSION patch=${PATCH:-none} case=$name rc=$rc kind=$kind"[0m
+[36;1m}[0m
+[36;1memcc -fexceptions -c a.cpp -O2 -o a.o[0m
+[36;1mrun A_default_link_closure      emcc a.o -O2 --closure=1 -o a.js[0m
+[36;1mrun B_longjmp0_link             emcc a.o -O2 -sSUPPORT_LONGJMP=0 -o b.js[0m
+[36;1mrun C_longjmp0_link_closure     emcc a.o -O2 -sSUPPORT_LONGJMP=0 --closure=1 -o c.js[0m
+[36;1memcc -fexceptions -sSUPPORT_LONGJMP=0 -c a.cpp -O2 -o a0.o[0m
+[36;1mrun D_longjmp0_both_closure     emcc a0.o -O2 -sSUPPORT_LONGJMP=0 --closure=1 -o d.js[0m
+[36;1mrun E_longjmp0_link_assertions  emcc a.o -O2 -sSUPPORT_LONGJMP=0 -sASSERTIONS=1 -o e.js[0m
+[36;1m[ -f b.js ] && { echo "::group::b.js invoke/setThrew occurrences"; grep -o "invoke_[a-z]*\|_setThrew\|stackSave" b.js | sort | uniq -c; echo "::endgroup::"; }[0m
+[36;1mexit 0[0m
+[36;1mSH[0m
+[36;1mdocker run --rm -e VERSION=5.0.7 -e PATCH="$PATCH" -v "$PWD:/src" -w /src $IMG bash run.sh[0m
+shell: /usr/bin/bash -e {0}
+##[endgroup]
+Unable to find image 'emscripten/emsdk:5.0.7-arm64' locally
+5.0.7-arm64: Pulling from emscripten/emsdk
+818154cda96d: Pulling fs layer
+91141bd1aae6: Pulling fs layer
+c3410f6229f9: Pulling fs layer
+eccbe9f062c2: Pulling fs layer
+eccbe9f062c2: Waiting
+818154cda96d: Verifying Checksum
+818154cda96d: Download complete
+eccbe9f062c2: Verifying Checksum
+eccbe9f062c2: Download complete
+c3410f6229f9: Verifying Checksum
+c3410f6229f9: Download complete
+818154cda96d: Pull complete
+91141bd1aae6: Verifying Checksum
+91141bd1aae6: Download complete
+91141bd1aae6: Pull complete
+c3410f6229f9: Pull complete
+eccbe9f062c2: Pull complete
+Digest: sha256:19b3a361d84262c1cd133a29fb84368678bab32aee47e074fcd83a216566330c
+Status: Downloaded newer image for emscripten/emsdk:5.0.7-arm64
+emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 5.0.7 (263db4cffa6f9fc2ec514a70abac81362ea41849)
+##[group]A_default_link_closure: emcc a.o -O2 --closure=1 -o a.js
+building:ERROR: Closure compiler run failed:
+
+building:ERROR: /tmp/emscripten_temp_0lbz2bo5/a.jso1.js:501:2: ERROR - [JSC_UNDEFINED_VARIABLE] variable setTempRet0 is undeclared
+  501|   setTempRet0(0);
+         ^^^^^^^^^^^
+
+/tmp/emscripten_temp_0lbz2bo5/a.jso1.js:676:4: ERROR - [JSC_UNDEFINED_VARIABLE] variable _setThrew is undeclared
+  676|     _setThrew(1, 0);
+           ^^^^^^^^^
+
+2 error(s), 0 warning(s)
+
+emcc: error: closure compiler failed (rc: 2): /emsdk/node/22.16.0_64bit/bin/node --max_old_space_size=8192 /emsdk/upstream/emscripten/node_modules/.bin/google-closure-compiler --compilation_level ADVANCED_OPTIMIZATIONS --language_in UNSTABLE --language_out NO_TRANSPILE --emit_use_strict=false --assume_static_inheritance_is_not_used=false --charset=UTF8 --externs /emsdk/upstream/emscripten/src/closure-externs/closure-externs.js --externs /emsdk/upstream/emscripten/src/closure-externs/node-externs.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/punycode.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/vm.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/util.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/querystring.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/dgram.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/dns.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/domain.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/net.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/readline.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/core.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/zlib.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/stream.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/os.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/process.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/cluster.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/fs.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/tls.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/tty.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/string_decoder.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/path.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/events.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/https.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/repl.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/child_process.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/url.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/http.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/buffer.js --js /tmp/emscripten_temp_0lbz2bo5/a.jso1.js --js_output_file tmp2v1iwdqv.cc.js the error message may be clearer with -g1 and EMCC_DEBUG=2 set
+##[endgroup]
+RESULT version=5.0.7 patch=none case=A_default_link_closure rc=1 kind=closure-undeclared
+##[group]B_longjmp0_link: emcc a.o -O2 -sSUPPORT_LONGJMP=0 -o b.js
+Traceback (most recent call last):
+  File "/emsdk/upstream/emscripten/emcc.py", line 586, in <module>
+    sys.exit(main(sys.argv))
+             ^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/emsdk/upstream/emscripten/emcc.py", line 328, in main
+    return link.run(options, linker_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/emsdk/upstream/emscripten/tools/link.py", line 3155, in run
+    phase_post_link(options, wasm_target, wasm_target, target, js_syms, base_metadata)
+  File "/usr/lib/python3.12/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/emsdk/upstream/emscripten/tools/link.py", line 1898, in phase_post_link
+    metadata = phase_emscript(in_wasm, wasm_target, js_syms, base_metadata)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/emsdk/upstream/emscripten/tools/link.py", line 1930, in phase_emscript
+    metadata = emscripten.emscript(in_wasm, wasm_target, final_js, js_syms, base_metadata=base_metadata)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/emsdk/upstream/emscripten/tools/emscripten.py", line 469, in emscript
+    parts += create_module(metadata, function_exports, other_exports,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/emsdk/upstream/emscripten/tools/emscripten.py", line 1100, in create_module
+    assert not metadata.invoke_funcs, "invoke_ functions exported but exceptions and longjmp are both disabled"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: invoke_ functions exported but exceptions and longjmp are both disabled
+##[endgroup]
+RESULT version=5.0.7 patch=none case=B_longjmp0_link rc=1 kind=internal-error
+##[group]C_longjmp0_link_closure: emcc a.o -O2 -sSUPPORT_LONGJMP=0 --closure=1 -o c.js
+Traceback (most recent call last):
+  File "/emsdk/upstream/emscripten/emcc.py", line 586, in <module>
+    sys.exit(main(sys.argv))
+             ^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/emsdk/upstream/emscripten/emcc.py", line 328, in main
+    return link.run(options, linker_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/emsdk/upstream/emscripten/tools/link.py", line 3155, in run
+    phase_post_link(options, wasm_target, wasm_target, target, js_syms, base_metadata)
+  File "/usr/lib/python3.12/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/emsdk/upstream/emscripten/tools/link.py", line 1898, in phase_post_link
+    metadata = phase_emscript(in_wasm, wasm_target, js_syms, base_metadata)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/emsdk/upstream/emscripten/tools/link.py", line 1930, in phase_emscript
+    metadata = emscripten.emscript(in_wasm, wasm_target, final_js, js_syms, base_metadata=base_metadata)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/emsdk/upstream/emscripten/tools/emscripten.py", line 469, in emscript
+    parts += create_module(metadata, function_exports, other_exports,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/emsdk/upstream/emscripten/tools/emscripten.py", line 1100, in create_module
+    assert not metadata.invoke_funcs, "invoke_ functions exported but exceptions and longjmp are both disabled"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: invoke_ functions exported but exceptions and longjmp are both disabled
+##[endgroup]
+RESULT version=5.0.7 patch=none case=C_longjmp0_link_closure rc=1 kind=internal-error
+##[group]D_longjmp0_both_closure: emcc a0.o -O2 -sSUPPORT_LONGJMP=0 --closure=1 -o d.js
+Traceback (most recent call last):
+  File "/emsdk/upstream/emscripten/emcc.py", line 586, in <module>
+    sys.exit(main(sys.argv))
+             ^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/emsdk/upstream/emscripten/emcc.py", line 328, in main
+    return link.run(options, linker_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/emsdk/upstream/emscripten/tools/link.py", line 3155, in run
+    phase_post_link(options, wasm_target, wasm_target, target, js_syms, base_metadata)
+  File "/usr/lib/python3.12/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/emsdk/upstream/emscripten/tools/link.py", line 1898, in phase_post_link
+    metadata = phase_emscript(in_wasm, wasm_target, js_syms, base_metadata)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/emsdk/upstream/emscripten/tools/link.py", line 1930, in phase_emscript
+    metadata = emscripten.emscript(in_wasm, wasm_target, final_js, js_syms, base_metadata=base_metadata)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/emsdk/upstream/emscripten/tools/emscripten.py", line 469, in emscript
+    parts += create_module(metadata, function_exports, other_exports,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/emsdk/upstream/emscripten/tools/emscripten.py", line 1100, in create_module
+    assert not metadata.invoke_funcs, "invoke_ functions exported but exceptions and longjmp are both disabled"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: invoke_ functions exported but exceptions and longjmp are both disabled
+##[endgroup]
+RESULT version=5.0.7 patch=none case=D_longjmp0_both_closure rc=1 kind=internal-error
+##[group]E_longjmp0_link_assertions: emcc a.o -O2 -sSUPPORT_LONGJMP=0 -sASSERTIONS=1 -o e.js
+Traceback (most recent call last):
+  File "/emsdk/upstream/emscripten/emcc.py", line 586, in <module>
+    sys.exit(main(sys.argv))
+             ^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/emsdk/upstream/emscripten/emcc.py", line 328, in main
+    return link.run(options, linker_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/emsdk/upstream/emscripten/tools/link.py", line 3155, in run
+    phase_post_link(options, wasm_target, wasm_target, target, js_syms, base_metadata)
+  File "/usr/lib/python3.12/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/emsdk/upstream/emscripten/tools/link.py", line 1898, in phase_post_link
+    metadata = phase_emscript(in_wasm, wasm_target, js_syms, base_metadata)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/emsdk/upstream/emscripten/tools/link.py", line 1930, in phase_emscript
+    metadata = emscripten.emscript(in_wasm, wasm_target, final_js, js_syms, base_metadata=base_metadata)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/emsdk/upstream/emscripten/tools/emscripten.py", line 469, in emscript
+    parts += create_module(metadata, function_exports, other_exports,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/emsdk/upstream/emscripten/tools/emscripten.py", line 1100, in create_module
+    assert not metadata.invoke_funcs, "invoke_ functions exported but exceptions and longjmp are both disabled"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: invoke_ functions exported but exceptions and longjmp are both disabled
+##[endgroup]
+RESULT version=5.0.7 patch=none case=E_longjmp0_link_assertions rc=1 kind=internal-error
+Post job cleanup.
+[command]/usr/bin/git version
+git version 2.55.0
+Temporarily overriding HOME='/home/runner/work/_temp/a8e258ce-f888-4ba5-bcf5-f8259a95ef70' before making global git config changes
+Adding repository directory to the temporary git global config as a safe directory
+[command]/usr/bin/git config --global --add safe.directory /home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert
+[command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+[command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+[command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+http.https://github.com/.extraheader
+[command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+[command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+[command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+[command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Cleaning up orphan processes

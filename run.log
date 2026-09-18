@@ -1,0 +1,936 @@
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	﻿2026-09-16T13:36:04.3239909Z Current runner version: '2.337.0'
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3268881Z ##[group]Runner Image Provisioner
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3270049Z Hosted Compute Agent
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3270675Z Version: 20260828.587
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3271409Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3272152Z Build Date: 2026-08-28T16:44:25Z
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3273002Z Worker ID: {08ce8a89-21dc-4519-b7fa-417dba0be760}
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3273933Z Azure Region: westcentralus
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3274539Z ##[endgroup]
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3276393Z ##[group]Operating System
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3277312Z Ubuntu
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3278211Z 24.04.5
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3278831Z LTS
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3279347Z ##[endgroup]
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3279938Z ##[group]Runner Image
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3280640Z Image: ubuntu-24.04-arm
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3281295Z Version: 20260907.118.1
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3282510Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24-arm64/20260907.118/images/ubuntu/Ubuntu2404-Arm64-Readme.md
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3284321Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24-arm64%2F20260907.118
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3285371Z ##[endgroup]
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3288605Z ##[group]GITHUB_TOKEN Permissions
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3292329Z Actions: write
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3293002Z ArtifactMetadata: write
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3293772Z Attestations: write
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3294390Z Checks: write
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3294945Z CodeQuality: write
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3295597Z Contents: write
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3296175Z CopilotRequests: write
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3296829Z Deployments: write
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3297470Z Discussions: write
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3298291Z Drives: write
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3298919Z Issues: write
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3299457Z Metadata: read
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3300256Z Models: read
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3300865Z Packages: write
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3301420Z Pages: write
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3302047Z PullRequests: write
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3302657Z RepositoryProjects: write
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3303421Z SecurityEvents: write
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3304068Z Statuses: write
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3304665Z VulnerabilityAlerts: read
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3305346Z ##[endgroup]
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3308547Z Secret source: Actions
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3309797Z Cache mode: write
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3310837Z Prepare workflow directory
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3695351Z Prepare all required actions
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.3745892Z Getting action download info
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.7631171Z Download action repository 'actions/checkout@v5' (SHA:fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09)
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Set up job	2026-09-16T13:36:04.9531561Z Complete job name: probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	﻿2026-09-16T13:36:05.0349153Z ##[group]Run actions/checkout@v5
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.0350407Z with:
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.0351285Z   repository: MeshInspector/emsdk-wstring-convert
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.0355337Z   token: ***
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.0356084Z   ssh-strict: true
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.0356651Z   ssh-user: git
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.0357258Z   persist-credentials: true
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.0358573Z   clean: true
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.0359164Z   sparse-checkout-cone-mode: true
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.0359896Z   fetch-depth: 1
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.0360504Z   fetch-tags: false
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.0361068Z   show-progress: true
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.0361711Z   lfs: false
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.0362280Z   submodules: false
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.0362957Z   set-safe-directory: true
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.0363644Z   allow-unsafe-pr-checkout: false
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.0364838Z ##[endgroup]
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.1216471Z Syncing repository: MeshInspector/emsdk-wstring-convert
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.1219126Z ##[group]Getting Git version info
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.1220423Z Working directory is '/home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert'
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.1222026Z [command]/usr/bin/git version
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.1254627Z git version 2.55.0
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.1280122Z ##[endgroup]
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.1294929Z Temporarily overriding HOME='/home/runner/work/_temp/12d0403a-a4b2-481c-835e-5b8aa4c49d23' before making global git config changes
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.1297120Z Adding repository directory to the temporary git global config as a safe directory
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.1299360Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.1327861Z Deleting the contents of '/home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert'
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.1331760Z ##[group]Initializing the repository
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.1336222Z [command]/usr/bin/git init /home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.1479219Z hint: Using 'master' as the name for the initial branch. This default branch name
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.1480417Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.1481665Z hint: to use in all of your new repositories, which will suppress this warning,
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.1482511Z hint: call:
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.1483182Z hint:
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.1483799Z hint: 	git config --global init.defaultBranch <name>
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.1484479Z hint:
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.1485264Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.1486299Z hint: 'development'. The just-created branch can be renamed via this command:
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.1487189Z hint:
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.1488041Z hint: 	git branch -m <name>
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.1488660Z hint:
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.1490046Z hint: Disable this message with "git config set advice.defaultBranchName false"
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.1491399Z Initialized empty Git repository in /home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert/.git/
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.1493725Z [command]/usr/bin/git remote add origin https://github.com/MeshInspector/emsdk-wstring-convert
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.1526222Z ##[endgroup]
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.1527327Z ##[group]Disabling automatic garbage collection
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.1528325Z [command]/usr/bin/git config --local gc.auto 0
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.1603499Z ##[endgroup]
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.1604523Z ##[group]Setting up auth
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.1608931Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.1635974Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.1914544Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.1942607Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.2118111Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.2146206Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.2320183Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.2350729Z ##[endgroup]
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.2351745Z ##[group]Fetching the repository
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.2358130Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +66234a7084c5eb960d47cdd17cf6e18bf150001d:refs/remotes/origin/sjlj0
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.6202899Z From https://github.com/MeshInspector/emsdk-wstring-convert
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.6204609Z  * [new ref]         66234a7084c5eb960d47cdd17cf6e18bf150001d -> origin/sjlj0
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.6207804Z ##[endgroup]
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.6209174Z ##[group]Determining the checkout info
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.6210330Z ##[endgroup]
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.6215433Z [command]/usr/bin/git sparse-checkout disable
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.6249852Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.6273521Z ##[group]Checking out the ref
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.6276039Z [command]/usr/bin/git checkout --progress --force -B sjlj0 refs/remotes/origin/sjlj0
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.6308513Z Switched to a new branch 'sjlj0'
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.6309761Z branch 'sjlj0' set up to track 'origin/sjlj0'.
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.6313759Z ##[endgroup]
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.6345254Z [command]/usr/bin/git log -1 --format=%H
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run actions/checkout@v5	2026-09-16T13:36:05.6364149Z 66234a7084c5eb960d47cdd17cf6e18bf150001d
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	﻿2026-09-16T13:36:05.6598988Z ##[group]Run IMG=emscripten/emsdk:6.0.9-arm64
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:05.6600097Z [36;1mIMG=emscripten/emsdk:6.0.9-arm64[0m
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:05.6601076Z [36;1mPATCH='49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c'[0m
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:05.6601823Z [36;1mcat > run.sh <<'SH'[0m
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:05.6602503Z [36;1mset -u[0m
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:05.6603062Z [36;1mcd /src[0m
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:05.6603658Z [36;1mif [ -n "$PATCH" ]; then[0m
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:05.6604734Z [36;1m  curl -sfL "https://github.com/emscripten-core/emscripten/commit/$PATCH.patch" -o /tmp/fix.patch[0m
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:05.6606487Z [36;1m  (cd /emsdk/upstream/emscripten && git apply --exclude='test/*' --exclude='ChangeLog.md' /tmp/fix.patch) && echo "PATCH applied: $PATCH" || { echo "PATCH FAILED"; exit 1; }[0m
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:05.6608533Z [36;1m  grep -n "SUPPORT_LONGJMP == 'emscripten'" /emsdk/upstream/emscripten/tools/link.py | head -3[0m
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:05.6609501Z [36;1mfi[0m
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:05.6610075Z [36;1memcc --version | head -1[0m
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:05.6610958Z [36;1mrun() { # name, then the command[0m
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:05.6611630Z [36;1m  name=$1; shift[0m
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:05.6612289Z [36;1m  echo "::group::$name: $*"[0m
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:05.6613015Z [36;1m  "$@" > /tmp/$name.log 2>&1; rc=$?[0m
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:05.6613773Z [36;1m  cat /tmp/$name.log[0m
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:05.6614423Z [36;1m  echo "::endgroup::"[0m
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:05.6615276Z [36;1m  if grep -q "JSC_UNDEFINED_VARIABLE" /tmp/$name.log; then kind=closure-undeclared[0m
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:05.6616682Z [36;1m  elif grep -qi "AssertionError\|Internal compiler error\|Traceback" /tmp/$name.log; then kind=internal-error[0m
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:05.6618167Z [36;1m  elif grep -qi "error:" /tmp/$name.log; then kind=error[0m
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:05.6618984Z [36;1m  elif [ $rc -eq 0 ]; then kind=ok[0m
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:05.6619772Z [36;1m  else kind=rc$rc; fi[0m
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:05.6620716Z [36;1m  echo "RESULT version=$VERSION patch=${PATCH:-none} case=$name rc=$rc kind=$kind"[0m
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:05.6621655Z [36;1m}[0m
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:05.6622249Z [36;1memcc -fexceptions -c a.cpp -O2 -o a.o[0m
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:05.6623112Z [36;1mrun A_default_link_closure      emcc a.o -O2 --closure=1 -o a.js[0m
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:05.6624176Z [36;1mrun B_longjmp0_link             emcc a.o -O2 -sSUPPORT_LONGJMP=0 -o b.js[0m
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:05.6625259Z [36;1mrun C_longjmp0_link_closure     emcc a.o -O2 -sSUPPORT_LONGJMP=0 --closure=1 -o c.js[0m
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:05.6626387Z [36;1memcc -fexceptions -sSUPPORT_LONGJMP=0 -c a.cpp -O2 -o a0.o[0m
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:05.6627579Z [36;1mrun D_longjmp0_both_closure     emcc a0.o -O2 -sSUPPORT_LONGJMP=0 --closure=1 -o d.js[0m
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:05.6629009Z [36;1mrun E_longjmp0_link_assertions  emcc a.o -O2 -sSUPPORT_LONGJMP=0 -sASSERTIONS=1 -o e.js[0m
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:05.6630596Z [36;1m[ -f b.js ] && { echo "::group::b.js invoke/setThrew occurrences"; grep -o "invoke_[a-z]*\|_setThrew\|stackSave" b.js | sort | uniq -c; echo "::endgroup::"; }[0m
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:05.6631805Z [36;1mexit 0[0m
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:05.6632385Z [36;1mSH[0m
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:05.6633220Z [36;1mdocker run --rm -e VERSION=6.0.9 -e PATCH="$PATCH" -v "$PWD:/src" -w /src $IMG bash run.sh[0m
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:05.6732979Z shell: /usr/bin/bash -e {0}
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:05.6733765Z ##[endgroup]
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:05.7453634Z Unable to find image 'emscripten/emsdk:6.0.9-arm64' locally
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:06.5001670Z 6.0.9-arm64: Pulling from emscripten/emsdk
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:06.5014054Z 0b613318ea87: Pulling fs layer
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:06.5014681Z d38f376254ce: Pulling fs layer
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:06.5015353Z bb0683b116f3: Pulling fs layer
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:06.5019144Z 327dfd820399: Pulling fs layer
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:06.5025201Z 327dfd820399: Waiting
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:06.9798186Z 0b613318ea87: Verifying Checksum
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:06.9799187Z 0b613318ea87: Download complete
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:07.1765621Z 327dfd820399: Verifying Checksum
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:07.1767569Z 327dfd820399: Download complete
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:07.5115920Z bb0683b116f3: Verifying Checksum
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:07.5118112Z bb0683b116f3: Download complete
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:08.1785350Z 0b613318ea87: Pull complete
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:08.4152944Z d38f376254ce: Verifying Checksum
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:08.4153559Z d38f376254ce: Download complete
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:19.7418623Z d38f376254ce: Pull complete
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:26.5323854Z bb0683b116f3: Pull complete
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:26.5410023Z 327dfd820399: Pull complete
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:26.5444966Z Digest: sha256:41039722671531506a7d081828721e9ccde93125d91f88351e0fe4301606c7d4
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:26.5454810Z Status: Downloaded newer image for emscripten/emsdk:6.0.9-arm64
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:27.2057615Z PATCH applied: 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:27.2071807Z 1499:  if settings.SUPPORT_LONGJMP == 'emscripten' or not settings.DISABLE_EXCEPTION_CATCHING:
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:27.2073002Z 1726:  if not settings.DISABLE_EXCEPTION_CATCHING or settings.SUPPORT_LONGJMP == 'emscripten':
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:27.2844386Z emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 6.0.9 (4e4223852a0835923411059a3929907d7df1232e)
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:27.8169135Z ##[group]A_default_link_closure: emcc a.o -O2 --closure=1 -o a.js
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.1201262Z wasm-ld: error: a.o: undefined symbol: std::__2::to_string(int)
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.1202220Z wasm-ld: error: a.o: undefined symbol: operator new(unsigned long)
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.1202830Z wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.1203531Z wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.1204236Z wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.1204760Z wasm-ld: error: a.o: undefined symbol: __resumeException
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.1205265Z wasm-ld: error: a.o: undefined symbol: __cxa_allocate_exception
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.1205766Z wasm-ld: error: a.o: undefined symbol: typeinfo for std::length_error
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.1206417Z wasm-ld: error: a.o: undefined symbol: std::length_error::~length_error()
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.1206916Z wasm-ld: error: a.o: undefined symbol: __cxa_throw
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.1207316Z wasm-ld: error: a.o: undefined symbol: __cxa_free_exception
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.1208175Z wasm-ld: error: a.o: undefined symbol: __resumeException
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.1208685Z wasm-ld: error: a.o: undefined symbol: std::logic_error::logic_error(char const*)
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.1209262Z wasm-ld: error: a.o: undefined symbol: vtable for std::length_error
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.1209911Z emcc: warning: link failed with undefined C++ symbols. Try linking with 'em++' or passing '-sDEFAULT_TO_CXX'
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.1213960Z emcc: error: '/emsdk/upstream/bin/wasm-ld -o a.wasm /tmp/tmpiux_w0hdlibemscripten_js_symbols.so -Bstatic --strip-debug --export=_emscripten_stack_alloc --export=setThrew --export=__wasm_call_ctors --export=emscripten_stack_get_current --export=_emscripten_stack_restore --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_lib_deps --export-if-defined=__stop_em_lib_deps --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=main --export-if-defined=__main_argc_argv --export-table -z stack-size=65536 --no-growable-memory --initial-heap=16777216 --no-entry --no-stack-first --table-base=1 --global-base=1024 a.o -L/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten -L/emsdk/upstream/emscripten/src/lib -lGL-getprocaddr -lal -lhtml5 -lstubs -lnoexit -lc -ldlmalloc -lclang_rt.builtins -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr' failed (returned 1)
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.1218727Z ##[endgroup]
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.1224255Z RESULT version=6.0.9 patch=49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c case=A_default_link_closure rc=1 kind=error
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.4025360Z ##[group]B_longjmp0_link: emcc a.o -O2 -sSUPPORT_LONGJMP=0 -o b.js
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.4026012Z wasm-ld: error: a.o: undefined symbol: std::__2::to_string(int)
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.4027332Z wasm-ld: error: a.o: undefined symbol: operator new(unsigned long)
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.4028729Z wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.4029460Z wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.4030500Z wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.4031284Z wasm-ld: error: a.o: undefined symbol: __resumeException
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.4031947Z wasm-ld: error: a.o: undefined symbol: __cxa_allocate_exception
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.4032766Z wasm-ld: error: a.o: undefined symbol: typeinfo for std::length_error
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.4033463Z wasm-ld: error: a.o: undefined symbol: std::length_error::~length_error()
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.4034178Z wasm-ld: error: a.o: undefined symbol: __cxa_throw
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.4034765Z wasm-ld: error: a.o: undefined symbol: __cxa_free_exception
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.4035387Z wasm-ld: error: a.o: undefined symbol: __resumeException
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.4036194Z wasm-ld: error: a.o: undefined symbol: std::logic_error::logic_error(char const*)
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.4036894Z wasm-ld: error: a.o: undefined symbol: vtable for std::length_error
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.4038001Z emcc: warning: link failed with undefined C++ symbols. Try linking with 'em++' or passing '-sDEFAULT_TO_CXX'
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.4042980Z emcc: error: '/emsdk/upstream/bin/wasm-ld -o b.wasm /tmp/tmpbeyoo9mklibemscripten_js_symbols.so -Bstatic --strip-debug --export=_emscripten_stack_alloc --export=__wasm_call_ctors --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_lib_deps --export-if-defined=__stop_em_lib_deps --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=main --export-if-defined=__main_argc_argv --export-table -z stack-size=65536 --no-growable-memory --initial-heap=16777216 --no-entry --no-stack-first --table-base=1 --global-base=1024 a.o -L/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten -L/emsdk/upstream/emscripten/src/lib -lGL-getprocaddr -lal -lhtml5 -lstubs -lnoexit -lc -ldlmalloc -lclang_rt.builtins -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -disable-lsr' failed (returned 1)
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.4047269Z ##[endgroup]
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.4048289Z RESULT version=6.0.9 patch=49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c case=B_longjmp0_link rc=1 kind=error
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.4049836Z ##[group]C_longjmp0_link_closure: emcc a.o -O2 -sSUPPORT_LONGJMP=0 --closure=1 -o c.js
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.6841672Z wasm-ld: error: a.o: undefined symbol: std::__2::to_string(int)
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.6842250Z wasm-ld: error: a.o: undefined symbol: operator new(unsigned long)
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.6842974Z wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.6843506Z wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.6843992Z wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.6844535Z wasm-ld: error: a.o: undefined symbol: __resumeException
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.6844942Z wasm-ld: error: a.o: undefined symbol: __cxa_allocate_exception
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.6845444Z wasm-ld: error: a.o: undefined symbol: typeinfo for std::length_error
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.6845926Z wasm-ld: error: a.o: undefined symbol: std::length_error::~length_error()
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.6846736Z wasm-ld: error: a.o: undefined symbol: __cxa_throw
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.6847210Z wasm-ld: error: a.o: undefined symbol: __cxa_free_exception
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.6848138Z wasm-ld: error: a.o: undefined symbol: __resumeException
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.6848760Z wasm-ld: error: a.o: undefined symbol: std::logic_error::logic_error(char const*)
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.6849271Z wasm-ld: error: a.o: undefined symbol: vtable for std::length_error
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.6849852Z emcc: warning: link failed with undefined C++ symbols. Try linking with 'em++' or passing '-sDEFAULT_TO_CXX'
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.6853455Z emcc: error: '/emsdk/upstream/bin/wasm-ld -o c.wasm /tmp/tmpc3ltjdtylibemscripten_js_symbols.so -Bstatic --strip-debug --export=_emscripten_stack_alloc --export=__wasm_call_ctors --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_lib_deps --export-if-defined=__stop_em_lib_deps --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=main --export-if-defined=__main_argc_argv --export-table -z stack-size=65536 --no-growable-memory --initial-heap=16777216 --no-entry --no-stack-first --table-base=1 --global-base=1024 a.o -L/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten -L/emsdk/upstream/emscripten/src/lib -lGL-getprocaddr -lal -lhtml5 -lstubs -lnoexit -lc -ldlmalloc -lclang_rt.builtins -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -disable-lsr' failed (returned 1)
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.6857339Z ##[endgroup]
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:28.6865796Z RESULT version=6.0.9 patch=49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c case=C_longjmp0_link_closure rc=1 kind=error
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:29.2125876Z ##[group]D_longjmp0_both_closure: emcc a0.o -O2 -sSUPPORT_LONGJMP=0 --closure=1 -o d.js
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:29.3374261Z wasm-ld: error: a0.o: undefined symbol: std::__2::to_string(int)
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:29.3375008Z wasm-ld: error: a0.o: undefined symbol: operator new(unsigned long)
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:29.3375484Z wasm-ld: error: a0.o: undefined symbol: operator delete(void*, unsigned long)
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:29.3376106Z wasm-ld: error: a0.o: undefined symbol: operator delete(void*, unsigned long)
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:29.3376610Z wasm-ld: error: a0.o: undefined symbol: operator delete(void*, unsigned long)
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:29.3377044Z wasm-ld: error: a0.o: undefined symbol: __resumeException
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:29.3377485Z wasm-ld: error: a0.o: undefined symbol: __cxa_allocate_exception
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:29.3378161Z wasm-ld: error: a0.o: undefined symbol: typeinfo for std::length_error
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:29.3378706Z wasm-ld: error: a0.o: undefined symbol: std::length_error::~length_error()
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:29.3379134Z wasm-ld: error: a0.o: undefined symbol: __cxa_throw
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:29.3379505Z wasm-ld: error: a0.o: undefined symbol: __cxa_free_exception
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:29.3379932Z wasm-ld: error: a0.o: undefined symbol: __resumeException
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:29.3380386Z wasm-ld: error: a0.o: undefined symbol: std::logic_error::logic_error(char const*)
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:29.3380919Z wasm-ld: error: a0.o: undefined symbol: vtable for std::length_error
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:29.3381499Z emcc: warning: link failed with undefined C++ symbols. Try linking with 'em++' or passing '-sDEFAULT_TO_CXX'
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:29.3384744Z emcc: error: '/emsdk/upstream/bin/wasm-ld -o d.wasm /tmp/tmp_7cgvro_libemscripten_js_symbols.so -Bstatic --strip-debug --export=_emscripten_stack_alloc --export=__wasm_call_ctors --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_lib_deps --export-if-defined=__stop_em_lib_deps --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=main --export-if-defined=__main_argc_argv --export-table -z stack-size=65536 --no-growable-memory --initial-heap=16777216 --no-entry --no-stack-first --table-base=1 --global-base=1024 a0.o -L/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten -L/emsdk/upstream/emscripten/src/lib -lGL-getprocaddr -lal -lhtml5 -lstubs -lnoexit -lc -ldlmalloc -lclang_rt.builtins -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -disable-lsr' failed (returned 1)
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:29.3389053Z ##[endgroup]
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:29.3397287Z RESULT version=6.0.9 patch=49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c case=D_longjmp0_both_closure rc=1 kind=error
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:29.3399008Z ##[group]E_longjmp0_link_assertions: emcc a.o -O2 -sSUPPORT_LONGJMP=0 -sASSERTIONS=1 -o e.js
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:29.6199197Z wasm-ld: error: a.o: undefined symbol: std::__2::to_string(int)
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:29.6199770Z wasm-ld: error: a.o: undefined symbol: operator new(unsigned long)
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:29.6200789Z wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:29.6201308Z wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:29.6201822Z wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:29.6202267Z wasm-ld: error: a.o: undefined symbol: __resumeException
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:29.6202686Z wasm-ld: error: a.o: undefined symbol: __cxa_allocate_exception
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:29.6203189Z wasm-ld: error: a.o: undefined symbol: typeinfo for std::length_error
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:29.6203670Z wasm-ld: error: a.o: undefined symbol: std::length_error::~length_error()
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:29.6204100Z wasm-ld: error: a.o: undefined symbol: __cxa_throw
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:29.6204471Z wasm-ld: error: a.o: undefined symbol: __cxa_free_exception
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:29.6204857Z wasm-ld: error: a.o: undefined symbol: __resumeException
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:29.6205363Z wasm-ld: error: a.o: undefined symbol: std::logic_error::logic_error(char const*)
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:29.6205848Z wasm-ld: error: a.o: undefined symbol: vtable for std::length_error
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:29.6206410Z emcc: warning: link failed with undefined C++ symbols. Try linking with 'em++' or passing '-sDEFAULT_TO_CXX'
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:29.6210676Z emcc: error: '/emsdk/upstream/bin/wasm-ld -o e.wasm /tmp/tmphhy38_f2libemscripten_js_symbols.so -Bstatic --strip-debug --export=emscripten_stack_get_end --export=emscripten_stack_get_free --export=emscripten_stack_get_base --export=emscripten_stack_get_current --export=emscripten_stack_init --export=_emscripten_stack_alloc --export=__wasm_call_ctors --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_lib_deps --export-if-defined=__stop_em_lib_deps --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=main --export-if-defined=__main_argc_argv --export-if-defined=fflush --export-table -z stack-size=65536 --no-growable-memory --initial-heap=16777216 --no-entry --no-stack-first --table-base=1 --global-base=1024 a.o -L/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten -L/emsdk/upstream/emscripten/src/lib -lGL-getprocaddr -lal -lhtml5 -lstubs-debug -lnoexit -lc-debug -ldlmalloc-debug -lclang_rt.builtins -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -disable-lsr' failed (returned 1)
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:29.6215740Z ##[endgroup]
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Run the cases	2026-09-16T13:36:29.6223772Z RESULT version=6.0.9 patch=49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c case=E_longjmp0_link_assertions rc=1 kind=error
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Post Run actions/checkout@v5	﻿2026-09-16T13:36:29.7033807Z Post job cleanup.
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Post Run actions/checkout@v5	2026-09-16T13:36:29.7707529Z [command]/usr/bin/git version
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Post Run actions/checkout@v5	2026-09-16T13:36:29.7741409Z git version 2.55.0
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Post Run actions/checkout@v5	2026-09-16T13:36:29.7772727Z Temporarily overriding HOME='/home/runner/work/_temp/0a551141-4343-44a3-a3cf-d170ab72573e' before making global git config changes
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Post Run actions/checkout@v5	2026-09-16T13:36:29.7773509Z Adding repository directory to the temporary git global config as a safe directory
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Post Run actions/checkout@v5	2026-09-16T13:36:29.7776819Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Post Run actions/checkout@v5	2026-09-16T13:36:29.7809136Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Post Run actions/checkout@v5	2026-09-16T13:36:29.7838901Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Post Run actions/checkout@v5	2026-09-16T13:36:29.8013586Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Post Run actions/checkout@v5	2026-09-16T13:36:29.8040285Z http.https://github.com/.extraheader
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Post Run actions/checkout@v5	2026-09-16T13:36:29.8047292Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Post Run actions/checkout@v5	2026-09-16T13:36:29.8068549Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Post Run actions/checkout@v5	2026-09-16T13:36:29.8241918Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Post Run actions/checkout@v5	2026-09-16T13:36:29.8268715Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+probe (6.0.9, 49a7d0dbcbe876a7b1d5bad950dc89f1b4cc6a0c)	Complete job	﻿2026-09-16T13:36:29.8574186Z Cleaning up orphan processes
+probe (6.0.9)	Set up job	﻿2026-09-16T13:36:04.1904083Z Current runner version: '2.337.0'
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1938889Z ##[group]Runner Image Provisioner
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1940026Z Hosted Compute Agent
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1940749Z Version: 20260828.587
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1941449Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1942233Z Build Date: 2026-08-28T16:44:25Z
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1942957Z Worker ID: {296684e1-8ad3-46b3-982f-49e3c8769756}
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1943761Z Azure Region: northcentralus
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1944399Z ##[endgroup]
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1947594Z ##[group]Operating System
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1948544Z Ubuntu
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1949074Z 24.04.5
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1949641Z LTS
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1950323Z ##[endgroup]
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1950946Z ##[group]Runner Image
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1951643Z Image: ubuntu-24.04-arm
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1952249Z Version: 20260907.118.1
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1953413Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24-arm64/20260907.118/images/ubuntu/Ubuntu2404-Arm64-Readme.md
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1955441Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24-arm64%2F20260907.118
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1956768Z ##[endgroup]
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1959811Z ##[group]GITHUB_TOKEN Permissions
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1964067Z Actions: write
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1964752Z ArtifactMetadata: write
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1965503Z Attestations: write
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1966094Z Checks: write
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1966955Z CodeQuality: write
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1967639Z Contents: write
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1968208Z CopilotRequests: write
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1968894Z Deployments: write
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1969499Z Discussions: write
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1970067Z Drives: write
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1970670Z Issues: write
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1971261Z Metadata: read
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1972067Z Models: read
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1972772Z Packages: write
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1973347Z Pages: write
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1973994Z PullRequests: write
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1974680Z RepositoryProjects: write
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1975341Z SecurityEvents: write
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1975996Z Statuses: write
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1976959Z VulnerabilityAlerts: read
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1977922Z ##[endgroup]
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1981197Z Secret source: Actions
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1982411Z Cache mode: write
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.1983481Z Prepare workflow directory
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.2408018Z Prepare all required actions
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.2466841Z Getting action download info
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.5597304Z Download action repository 'actions/checkout@v5' (SHA:fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09)
+probe (6.0.9)	Set up job	2026-09-16T13:36:04.8000929Z Complete job name: probe (6.0.9)
+probe (6.0.9)	Run actions/checkout@v5	﻿2026-09-16T13:36:04.8876499Z ##[group]Run actions/checkout@v5
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.8878002Z with:
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.8878668Z   repository: MeshInspector/emsdk-wstring-convert
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.8882722Z   token: ***
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.8883406Z   ssh-strict: true
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.8884035Z   ssh-user: git
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.8884614Z   persist-credentials: true
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.8885235Z   clean: true
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.8885899Z   sparse-checkout-cone-mode: true
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.8886828Z   fetch-depth: 1
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.8887456Z   fetch-tags: false
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.8888073Z   show-progress: true
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.8888636Z   lfs: false
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.8889268Z   submodules: false
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.8889892Z   set-safe-directory: true
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.8890582Z   allow-unsafe-pr-checkout: false
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.8891929Z ##[endgroup]
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.9772961Z Syncing repository: MeshInspector/emsdk-wstring-convert
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.9775725Z ##[group]Getting Git version info
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.9777121Z Working directory is '/home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert'
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.9778860Z [command]/usr/bin/git version
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.9795574Z git version 2.55.0
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.9814639Z ##[endgroup]
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.9828748Z Temporarily overriding HOME='/home/runner/work/_temp/eedc1a44-8c62-493a-8b0f-1c11375f965d' before making global git config changes
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.9830796Z Adding repository directory to the temporary git global config as a safe directory
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.9833439Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.9866412Z Deleting the contents of '/home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert'
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.9871207Z ##[group]Initializing the repository
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.9875764Z [command]/usr/bin/git init /home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.9942636Z hint: Using 'master' as the name for the initial branch. This default branch name
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.9944156Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.9945222Z hint: to use in all of your new repositories, which will suppress this warning,
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.9946694Z hint: call:
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.9947397Z hint:
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.9948191Z hint: 	git config --global init.defaultBranch <name>
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.9948951Z hint:
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.9950047Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.9951280Z hint: 'development'. The just-created branch can be renamed via this command:
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.9952472Z hint:
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.9953287Z hint: 	git branch -m <name>
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.9954181Z hint:
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.9955188Z hint: Disable this message with "git config set advice.defaultBranchName false"
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.9956839Z Initialized empty Git repository in /home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert/.git/
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.9960390Z [command]/usr/bin/git remote add origin https://github.com/MeshInspector/emsdk-wstring-convert
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.9990472Z ##[endgroup]
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.9991670Z ##[group]Disabling automatic garbage collection
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:04.9993873Z [command]/usr/bin/git config --local gc.auto 0
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:05.0025225Z ##[endgroup]
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:05.0027019Z ##[group]Setting up auth
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:05.0030110Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:05.0058841Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:05.0334847Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:05.0362686Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:05.0562546Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:05.0590623Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:05.0795964Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:05.0830052Z ##[endgroup]
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:05.0831243Z ##[group]Fetching the repository
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:05.0839503Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +66234a7084c5eb960d47cdd17cf6e18bf150001d:refs/remotes/origin/sjlj0
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:05.6434379Z From https://github.com/MeshInspector/emsdk-wstring-convert
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:05.6436867Z  * [new ref]         66234a7084c5eb960d47cdd17cf6e18bf150001d -> origin/sjlj0
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:05.6444419Z ##[endgroup]
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:05.6446484Z ##[group]Determining the checkout info
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:05.6451717Z ##[endgroup]
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:05.6453400Z [command]/usr/bin/git sparse-checkout disable
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:05.6481323Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:05.6507333Z ##[group]Checking out the ref
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:05.6509912Z [command]/usr/bin/git checkout --progress --force -B sjlj0 refs/remotes/origin/sjlj0
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:05.6544425Z Switched to a new branch 'sjlj0'
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:05.6546642Z branch 'sjlj0' set up to track 'origin/sjlj0'.
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:05.6583904Z ##[endgroup]
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:05.6595154Z [command]/usr/bin/git log -1 --format=%H
+probe (6.0.9)	Run actions/checkout@v5	2026-09-16T13:36:05.6615680Z 66234a7084c5eb960d47cdd17cf6e18bf150001d
+probe (6.0.9)	Run the cases	﻿2026-09-16T13:36:05.6892753Z ##[group]Run IMG=emscripten/emsdk:6.0.9-arm64
+probe (6.0.9)	Run the cases	2026-09-16T13:36:05.6894548Z [36;1mIMG=emscripten/emsdk:6.0.9-arm64[0m
+probe (6.0.9)	Run the cases	2026-09-16T13:36:05.6895723Z [36;1mPATCH=''[0m
+probe (6.0.9)	Run the cases	2026-09-16T13:36:05.6896908Z [36;1mcat > run.sh <<'SH'[0m
+probe (6.0.9)	Run the cases	2026-09-16T13:36:05.6898022Z [36;1mset -u[0m
+probe (6.0.9)	Run the cases	2026-09-16T13:36:05.6898900Z [36;1mcd /src[0m
+probe (6.0.9)	Run the cases	2026-09-16T13:36:05.6899792Z [36;1mif [ -n "$PATCH" ]; then[0m
+probe (6.0.9)	Run the cases	2026-09-16T13:36:05.6901632Z [36;1m  curl -sfL "https://github.com/emscripten-core/emscripten/commit/$PATCH.patch" -o /tmp/fix.patch[0m
+probe (6.0.9)	Run the cases	2026-09-16T13:36:05.6904873Z [36;1m  (cd /emsdk/upstream/emscripten && git apply --exclude='test/*' --exclude='ChangeLog.md' /tmp/fix.patch) && echo "PATCH applied: $PATCH" || { echo "PATCH FAILED"; exit 1; }[0m
+probe (6.0.9)	Run the cases	2026-09-16T13:36:05.6908307Z [36;1m  grep -n "SUPPORT_LONGJMP == 'emscripten'" /emsdk/upstream/emscripten/tools/link.py | head -3[0m
+probe (6.0.9)	Run the cases	2026-09-16T13:36:05.6910031Z [36;1mfi[0m
+probe (6.0.9)	Run the cases	2026-09-16T13:36:05.6910979Z [36;1memcc --version | head -1[0m
+probe (6.0.9)	Run the cases	2026-09-16T13:36:05.6912120Z [36;1mrun() { # name, then the command[0m
+probe (6.0.9)	Run the cases	2026-09-16T13:36:05.6913361Z [36;1m  name=$1; shift[0m
+probe (6.0.9)	Run the cases	2026-09-16T13:36:05.6914331Z [36;1m  echo "::group::$name: $*"[0m
+probe (6.0.9)	Run the cases	2026-09-16T13:36:05.6915521Z [36;1m  "$@" > /tmp/$name.log 2>&1; rc=$?[0m
+probe (6.0.9)	Run the cases	2026-09-16T13:36:05.6916927Z [36;1m  cat /tmp/$name.log[0m
+probe (6.0.9)	Run the cases	2026-09-16T13:36:05.6917906Z [36;1m  echo "::endgroup::"[0m
+probe (6.0.9)	Run the cases	2026-09-16T13:36:05.6919359Z [36;1m  if grep -q "JSC_UNDEFINED_VARIABLE" /tmp/$name.log; then kind=closure-undeclared[0m
+probe (6.0.9)	Run the cases	2026-09-16T13:36:05.6921878Z [36;1m  elif grep -qi "AssertionError\|Internal compiler error\|Traceback" /tmp/$name.log; then kind=internal-error[0m
+probe (6.0.9)	Run the cases	2026-09-16T13:36:05.6924001Z [36;1m  elif grep -qi "error:" /tmp/$name.log; then kind=error[0m
+probe (6.0.9)	Run the cases	2026-09-16T13:36:05.6925427Z [36;1m  elif [ $rc -eq 0 ]; then kind=ok[0m
+probe (6.0.9)	Run the cases	2026-09-16T13:36:05.6926801Z [36;1m  else kind=rc$rc; fi[0m
+probe (6.0.9)	Run the cases	2026-09-16T13:36:05.6928361Z [36;1m  echo "RESULT version=$VERSION patch=${PATCH:-none} case=$name rc=$rc kind=$kind"[0m
+probe (6.0.9)	Run the cases	2026-09-16T13:36:05.6929998Z [36;1m}[0m
+probe (6.0.9)	Run the cases	2026-09-16T13:36:05.6930934Z [36;1memcc -fexceptions -c a.cpp -O2 -o a.o[0m
+probe (6.0.9)	Run the cases	2026-09-16T13:36:05.6932442Z [36;1mrun A_default_link_closure      emcc a.o -O2 --closure=1 -o a.js[0m
+probe (6.0.9)	Run the cases	2026-09-16T13:36:05.6934235Z [36;1mrun B_longjmp0_link             emcc a.o -O2 -sSUPPORT_LONGJMP=0 -o b.js[0m
+probe (6.0.9)	Run the cases	2026-09-16T13:36:05.6936293Z [36;1mrun C_longjmp0_link_closure     emcc a.o -O2 -sSUPPORT_LONGJMP=0 --closure=1 -o c.js[0m
+probe (6.0.9)	Run the cases	2026-09-16T13:36:05.6938224Z [36;1memcc -fexceptions -sSUPPORT_LONGJMP=0 -c a.cpp -O2 -o a0.o[0m
+probe (6.0.9)	Run the cases	2026-09-16T13:36:05.6940078Z [36;1mrun D_longjmp0_both_closure     emcc a0.o -O2 -sSUPPORT_LONGJMP=0 --closure=1 -o d.js[0m
+probe (6.0.9)	Run the cases	2026-09-16T13:36:05.6942227Z [36;1mrun E_longjmp0_link_assertions  emcc a.o -O2 -sSUPPORT_LONGJMP=0 -sASSERTIONS=1 -o e.js[0m
+probe (6.0.9)	Run the cases	2026-09-16T13:36:05.6944905Z [36;1m[ -f b.js ] && { echo "::group::b.js invoke/setThrew occurrences"; grep -o "invoke_[a-z]*\|_setThrew\|stackSave" b.js | sort | uniq -c; echo "::endgroup::"; }[0m
+probe (6.0.9)	Run the cases	2026-09-16T13:36:05.6947139Z [36;1mexit 0[0m
+probe (6.0.9)	Run the cases	2026-09-16T13:36:05.6948061Z [36;1mSH[0m
+probe (6.0.9)	Run the cases	2026-09-16T13:36:05.6949379Z [36;1mdocker run --rm -e VERSION=6.0.9 -e PATCH="$PATCH" -v "$PWD:/src" -w /src $IMG bash run.sh[0m
+probe (6.0.9)	Run the cases	2026-09-16T13:36:05.7044406Z shell: /usr/bin/bash -e {0}
+probe (6.0.9)	Run the cases	2026-09-16T13:36:05.7045545Z ##[endgroup]
+probe (6.0.9)	Run the cases	2026-09-16T13:36:05.7688492Z Unable to find image 'emscripten/emsdk:6.0.9-arm64' locally
+probe (6.0.9)	Run the cases	2026-09-16T13:36:06.2522200Z 6.0.9-arm64: Pulling from emscripten/emsdk
+probe (6.0.9)	Run the cases	2026-09-16T13:36:06.2534343Z 0b613318ea87: Pulling fs layer
+probe (6.0.9)	Run the cases	2026-09-16T13:36:06.2535511Z d38f376254ce: Pulling fs layer
+probe (6.0.9)	Run the cases	2026-09-16T13:36:06.2535913Z bb0683b116f3: Pulling fs layer
+probe (6.0.9)	Run the cases	2026-09-16T13:36:06.2536550Z 327dfd820399: Pulling fs layer
+probe (6.0.9)	Run the cases	2026-09-16T13:36:06.2537025Z 327dfd820399: Waiting
+probe (6.0.9)	Run the cases	2026-09-16T13:36:06.4037922Z 0b613318ea87: Verifying Checksum
+probe (6.0.9)	Run the cases	2026-09-16T13:36:06.4041480Z 0b613318ea87: Download complete
+probe (6.0.9)	Run the cases	2026-09-16T13:36:06.4774385Z 327dfd820399: Verifying Checksum
+probe (6.0.9)	Run the cases	2026-09-16T13:36:06.4776062Z 327dfd820399: Download complete
+probe (6.0.9)	Run the cases	2026-09-16T13:36:06.9907498Z bb0683b116f3: Verifying Checksum
+probe (6.0.9)	Run the cases	2026-09-16T13:36:06.9910558Z bb0683b116f3: Download complete
+probe (6.0.9)	Run the cases	2026-09-16T13:36:07.6804943Z 0b613318ea87: Pull complete
+probe (6.0.9)	Run the cases	2026-09-16T13:36:07.9915806Z d38f376254ce: Verifying Checksum
+probe (6.0.9)	Run the cases	2026-09-16T13:36:07.9918540Z d38f376254ce: Download complete
+probe (6.0.9)	Run the cases	2026-09-16T13:36:20.1275871Z d38f376254ce: Pull complete
+probe (6.0.9)	Run the cases	2026-09-16T13:36:27.0318644Z bb0683b116f3: Pull complete
+probe (6.0.9)	Run the cases	2026-09-16T13:36:27.0402542Z 327dfd820399: Pull complete
+probe (6.0.9)	Run the cases	2026-09-16T13:36:27.0437811Z Digest: sha256:41039722671531506a7d081828721e9ccde93125d91f88351e0fe4301606c7d4
+probe (6.0.9)	Run the cases	2026-09-16T13:36:27.0451908Z Status: Downloaded newer image for emscripten/emsdk:6.0.9-arm64
+probe (6.0.9)	Run the cases	2026-09-16T13:36:27.3593363Z emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 6.0.9 (4e4223852a0835923411059a3929907d7df1232e)
+probe (6.0.9)	Run the cases	2026-09-16T13:36:27.9234696Z ##[group]A_default_link_closure: emcc a.o -O2 --closure=1 -o a.js
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.2485794Z wasm-ld: error: a.o: undefined symbol: std::__2::to_string(int)
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.2486754Z wasm-ld: error: a.o: undefined symbol: operator new(unsigned long)
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.2487611Z wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.2488146Z wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.2488637Z wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.2489176Z wasm-ld: error: a.o: undefined symbol: __resumeException
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.2489603Z wasm-ld: error: a.o: undefined symbol: __cxa_allocate_exception
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.2490157Z wasm-ld: error: a.o: undefined symbol: typeinfo for std::length_error
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.2490666Z wasm-ld: error: a.o: undefined symbol: std::length_error::~length_error()
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.2491115Z wasm-ld: error: a.o: undefined symbol: __cxa_throw
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.2491576Z wasm-ld: error: a.o: undefined symbol: __cxa_free_exception
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.2491986Z wasm-ld: error: a.o: undefined symbol: __resumeException
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.2492491Z wasm-ld: error: a.o: undefined symbol: std::logic_error::logic_error(char const*)
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.2493068Z wasm-ld: error: a.o: undefined symbol: vtable for std::length_error
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.2493697Z emcc: warning: link failed with undefined C++ symbols. Try linking with 'em++' or passing '-sDEFAULT_TO_CXX'
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.2498013Z emcc: error: '/emsdk/upstream/bin/wasm-ld -o a.wasm /tmp/tmp8xcitjp3libemscripten_js_symbols.so -Bstatic --strip-debug --export=_emscripten_stack_alloc --export=__wasm_call_ctors --export=emscripten_stack_get_current --export=_emscripten_stack_restore --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_lib_deps --export-if-defined=__stop_em_lib_deps --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=main --export-if-defined=__main_argc_argv --export-table -z stack-size=65536 --no-growable-memory --initial-heap=16777216 --no-entry --no-stack-first --table-base=1 --global-base=1024 a.o -L/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten -L/emsdk/upstream/emscripten/src/lib -lGL-getprocaddr -lal -lhtml5 -lstubs -lnoexit -lc -ldlmalloc -lclang_rt.builtins -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr' failed (returned 1)
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.2502001Z ##[endgroup]
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.2508155Z RESULT version=6.0.9 patch=none case=A_default_link_closure rc=1 kind=error
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.2509069Z ##[group]B_longjmp0_link: emcc a.o -O2 -sSUPPORT_LONGJMP=0 -o b.js
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.5477190Z wasm-ld: error: a.o: undefined symbol: std::__2::to_string(int)
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.5478794Z wasm-ld: error: a.o: undefined symbol: operator new(unsigned long)
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.5479338Z wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.5479991Z wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.5480535Z wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.5481333Z wasm-ld: error: a.o: undefined symbol: __resumeException
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.5482149Z wasm-ld: error: a.o: undefined symbol: __cxa_allocate_exception
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.5482976Z wasm-ld: error: a.o: undefined symbol: typeinfo for std::length_error
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.5484074Z wasm-ld: error: a.o: undefined symbol: std::length_error::~length_error()
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.5484630Z wasm-ld: error: a.o: undefined symbol: __cxa_throw
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.5485004Z wasm-ld: error: a.o: undefined symbol: __cxa_free_exception
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.5485579Z wasm-ld: error: a.o: undefined symbol: __resumeException
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.5486050Z wasm-ld: error: a.o: undefined symbol: std::logic_error::logic_error(char const*)
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.5486779Z wasm-ld: error: a.o: undefined symbol: vtable for std::length_error
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.5487386Z emcc: warning: link failed with undefined C++ symbols. Try linking with 'em++' or passing '-sDEFAULT_TO_CXX'
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.5490696Z emcc: error: '/emsdk/upstream/bin/wasm-ld -o b.wasm /tmp/tmpqu7a4opplibemscripten_js_symbols.so -Bstatic --strip-debug --export=_emscripten_stack_alloc --export=__wasm_call_ctors --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_lib_deps --export-if-defined=__stop_em_lib_deps --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=main --export-if-defined=__main_argc_argv --export-table -z stack-size=65536 --no-growable-memory --initial-heap=16777216 --no-entry --no-stack-first --table-base=1 --global-base=1024 a.o -L/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten -L/emsdk/upstream/emscripten/src/lib -lGL-getprocaddr -lal -lhtml5 -lstubs -lnoexit -lc -ldlmalloc -lclang_rt.builtins -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -disable-lsr' failed (returned 1)
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.5494570Z ##[endgroup]
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.5505194Z RESULT version=6.0.9 patch=none case=B_longjmp0_link rc=1 kind=error
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.5506708Z ##[group]C_longjmp0_link_closure: emcc a.o -O2 -sSUPPORT_LONGJMP=0 --closure=1 -o c.js
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.8402359Z wasm-ld: error: a.o: undefined symbol: std::__2::to_string(int)
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.8402948Z wasm-ld: error: a.o: undefined symbol: operator new(unsigned long)
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.8403630Z wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.8404127Z wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.8404708Z wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.8405198Z wasm-ld: error: a.o: undefined symbol: __resumeException
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.8405612Z wasm-ld: error: a.o: undefined symbol: __cxa_allocate_exception
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.8406105Z wasm-ld: error: a.o: undefined symbol: typeinfo for std::length_error
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.8406775Z wasm-ld: error: a.o: undefined symbol: std::length_error::~length_error()
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.8407236Z wasm-ld: error: a.o: undefined symbol: __cxa_throw
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.8407645Z wasm-ld: error: a.o: undefined symbol: __cxa_free_exception
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.8408034Z wasm-ld: error: a.o: undefined symbol: __resumeException
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.8408519Z wasm-ld: error: a.o: undefined symbol: std::logic_error::logic_error(char const*)
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.8409000Z wasm-ld: error: a.o: undefined symbol: vtable for std::length_error
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.8409604Z emcc: warning: link failed with undefined C++ symbols. Try linking with 'em++' or passing '-sDEFAULT_TO_CXX'
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.8413251Z emcc: error: '/emsdk/upstream/bin/wasm-ld -o c.wasm /tmp/tmparblsjfjlibemscripten_js_symbols.so -Bstatic --strip-debug --export=_emscripten_stack_alloc --export=__wasm_call_ctors --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_lib_deps --export-if-defined=__stop_em_lib_deps --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=main --export-if-defined=__main_argc_argv --export-table -z stack-size=65536 --no-growable-memory --initial-heap=16777216 --no-entry --no-stack-first --table-base=1 --global-base=1024 a.o -L/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten -L/emsdk/upstream/emscripten/src/lib -lGL-getprocaddr -lal -lhtml5 -lstubs -lnoexit -lc -ldlmalloc -lclang_rt.builtins -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -disable-lsr' failed (returned 1)
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.8417611Z ##[endgroup]
+probe (6.0.9)	Run the cases	2026-09-16T13:36:28.8427275Z RESULT version=6.0.9 patch=none case=C_longjmp0_link_closure rc=1 kind=error
+probe (6.0.9)	Run the cases	2026-09-16T13:36:29.3865606Z ##[group]D_longjmp0_both_closure: emcc a0.o -O2 -sSUPPORT_LONGJMP=0 --closure=1 -o d.js
+probe (6.0.9)	Run the cases	2026-09-16T13:36:29.5211611Z wasm-ld: error: a0.o: undefined symbol: std::__2::to_string(int)
+probe (6.0.9)	Run the cases	2026-09-16T13:36:29.5212704Z wasm-ld: error: a0.o: undefined symbol: operator new(unsigned long)
+probe (6.0.9)	Run the cases	2026-09-16T13:36:29.5214093Z wasm-ld: error: a0.o: undefined symbol: operator delete(void*, unsigned long)
+probe (6.0.9)	Run the cases	2026-09-16T13:36:29.5214723Z wasm-ld: error: a0.o: undefined symbol: operator delete(void*, unsigned long)
+probe (6.0.9)	Run the cases	2026-09-16T13:36:29.5215290Z wasm-ld: error: a0.o: undefined symbol: operator delete(void*, unsigned long)
+probe (6.0.9)	Run the cases	2026-09-16T13:36:29.5215808Z wasm-ld: error: a0.o: undefined symbol: __resumeException
+probe (6.0.9)	Run the cases	2026-09-16T13:36:29.5216420Z wasm-ld: error: a0.o: undefined symbol: __cxa_allocate_exception
+probe (6.0.9)	Run the cases	2026-09-16T13:36:29.5216946Z wasm-ld: error: a0.o: undefined symbol: typeinfo for std::length_error
+probe (6.0.9)	Run the cases	2026-09-16T13:36:29.5217480Z wasm-ld: error: a0.o: undefined symbol: std::length_error::~length_error()
+probe (6.0.9)	Run the cases	2026-09-16T13:36:29.5217895Z wasm-ld: error: a0.o: undefined symbol: __cxa_throw
+probe (6.0.9)	Run the cases	2026-09-16T13:36:29.5218335Z wasm-ld: error: a0.o: undefined symbol: __cxa_free_exception
+probe (6.0.9)	Run the cases	2026-09-16T13:36:29.5218765Z wasm-ld: error: a0.o: undefined symbol: __resumeException
+probe (6.0.9)	Run the cases	2026-09-16T13:36:29.5219261Z wasm-ld: error: a0.o: undefined symbol: std::logic_error::logic_error(char const*)
+probe (6.0.9)	Run the cases	2026-09-16T13:36:29.5219771Z wasm-ld: error: a0.o: undefined symbol: vtable for std::length_error
+probe (6.0.9)	Run the cases	2026-09-16T13:36:29.5220358Z emcc: warning: link failed with undefined C++ symbols. Try linking with 'em++' or passing '-sDEFAULT_TO_CXX'
+probe (6.0.9)	Run the cases	2026-09-16T13:36:29.5223704Z emcc: error: '/emsdk/upstream/bin/wasm-ld -o d.wasm /tmp/tmpczp5_d_0libemscripten_js_symbols.so -Bstatic --strip-debug --export=_emscripten_stack_alloc --export=__wasm_call_ctors --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_lib_deps --export-if-defined=__stop_em_lib_deps --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=main --export-if-defined=__main_argc_argv --export-table -z stack-size=65536 --no-growable-memory --initial-heap=16777216 --no-entry --no-stack-first --table-base=1 --global-base=1024 a0.o -L/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten -L/emsdk/upstream/emscripten/src/lib -lGL-getprocaddr -lal -lhtml5 -lstubs -lnoexit -lc -ldlmalloc -lclang_rt.builtins -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -disable-lsr' failed (returned 1)
+probe (6.0.9)	Run the cases	2026-09-16T13:36:29.5227965Z ##[endgroup]
+probe (6.0.9)	Run the cases	2026-09-16T13:36:29.5238912Z RESULT version=6.0.9 patch=none case=D_longjmp0_both_closure rc=1 kind=error
+probe (6.0.9)	Run the cases	2026-09-16T13:36:29.5239924Z ##[group]E_longjmp0_link_assertions: emcc a.o -O2 -sSUPPORT_LONGJMP=0 -sASSERTIONS=1 -o e.js
+probe (6.0.9)	Run the cases	2026-09-16T13:36:29.8215859Z wasm-ld: error: a.o: undefined symbol: std::__2::to_string(int)
+probe (6.0.9)	Run the cases	2026-09-16T13:36:29.8216838Z wasm-ld: error: a.o: undefined symbol: operator new(unsigned long)
+probe (6.0.9)	Run the cases	2026-09-16T13:36:29.8217680Z wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+probe (6.0.9)	Run the cases	2026-09-16T13:36:29.8218236Z wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+probe (6.0.9)	Run the cases	2026-09-16T13:36:29.8218766Z wasm-ld: error: a.o: undefined symbol: operator delete(void*, unsigned long)
+probe (6.0.9)	Run the cases	2026-09-16T13:36:29.8219200Z wasm-ld: error: a.o: undefined symbol: __resumeException
+probe (6.0.9)	Run the cases	2026-09-16T13:36:29.8219671Z wasm-ld: error: a.o: undefined symbol: __cxa_allocate_exception
+probe (6.0.9)	Run the cases	2026-09-16T13:36:29.8220295Z wasm-ld: error: a.o: undefined symbol: typeinfo for std::length_error
+probe (6.0.9)	Run the cases	2026-09-16T13:36:29.8220800Z wasm-ld: error: a.o: undefined symbol: std::length_error::~length_error()
+probe (6.0.9)	Run the cases	2026-09-16T13:36:29.8221232Z wasm-ld: error: a.o: undefined symbol: __cxa_throw
+probe (6.0.9)	Run the cases	2026-09-16T13:36:29.8221597Z wasm-ld: error: a.o: undefined symbol: __cxa_free_exception
+probe (6.0.9)	Run the cases	2026-09-16T13:36:29.8222046Z wasm-ld: error: a.o: undefined symbol: __resumeException
+probe (6.0.9)	Run the cases	2026-09-16T13:36:29.8222513Z wasm-ld: error: a.o: undefined symbol: std::logic_error::logic_error(char const*)
+probe (6.0.9)	Run the cases	2026-09-16T13:36:29.8223036Z wasm-ld: error: a.o: undefined symbol: vtable for std::length_error
+probe (6.0.9)	Run the cases	2026-09-16T13:36:29.8223611Z emcc: warning: link failed with undefined C++ symbols. Try linking with 'em++' or passing '-sDEFAULT_TO_CXX'
+probe (6.0.9)	Run the cases	2026-09-16T13:36:29.8227979Z emcc: error: '/emsdk/upstream/bin/wasm-ld -o e.wasm /tmp/tmp3b5v2z00libemscripten_js_symbols.so -Bstatic --strip-debug --export=emscripten_stack_get_end --export=emscripten_stack_get_free --export=emscripten_stack_get_base --export=emscripten_stack_get_current --export=emscripten_stack_init --export=_emscripten_stack_alloc --export=__wasm_call_ctors --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_lib_deps --export-if-defined=__stop_em_lib_deps --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=main --export-if-defined=__main_argc_argv --export-if-defined=fflush --export-table -z stack-size=65536 --no-growable-memory --initial-heap=16777216 --no-entry --no-stack-first --table-base=1 --global-base=1024 a.o -L/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten -L/emsdk/upstream/emscripten/src/lib -lGL-getprocaddr -lal -lhtml5 -lstubs-debug -lnoexit -lc-debug -ldlmalloc-debug -lclang_rt.builtins -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -disable-lsr' failed (returned 1)
+probe (6.0.9)	Run the cases	2026-09-16T13:36:29.8232810Z ##[endgroup]
+probe (6.0.9)	Run the cases	2026-09-16T13:36:29.8239990Z RESULT version=6.0.9 patch=none case=E_longjmp0_link_assertions rc=1 kind=error
+probe (6.0.9)	Post Run actions/checkout@v5	﻿2026-09-16T13:36:29.9127115Z Post job cleanup.
+probe (6.0.9)	Post Run actions/checkout@v5	2026-09-16T13:36:29.9851861Z [command]/usr/bin/git version
+probe (6.0.9)	Post Run actions/checkout@v5	2026-09-16T13:36:29.9890480Z git version 2.55.0
+probe (6.0.9)	Post Run actions/checkout@v5	2026-09-16T13:36:29.9926393Z Temporarily overriding HOME='/home/runner/work/_temp/8d2eaa3a-e5fd-4b99-808f-1b8135d9fe5f' before making global git config changes
+probe (6.0.9)	Post Run actions/checkout@v5	2026-09-16T13:36:29.9927210Z Adding repository directory to the temporary git global config as a safe directory
+probe (6.0.9)	Post Run actions/checkout@v5	2026-09-16T13:36:29.9935104Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert
+probe (6.0.9)	Post Run actions/checkout@v5	2026-09-16T13:36:29.9974583Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+probe (6.0.9)	Post Run actions/checkout@v5	2026-09-16T13:36:30.0007836Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+probe (6.0.9)	Post Run actions/checkout@v5	2026-09-16T13:36:30.0216818Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+probe (6.0.9)	Post Run actions/checkout@v5	2026-09-16T13:36:30.0240154Z http.https://github.com/.extraheader
+probe (6.0.9)	Post Run actions/checkout@v5	2026-09-16T13:36:30.0251054Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+probe (6.0.9)	Post Run actions/checkout@v5	2026-09-16T13:36:30.0287745Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+probe (6.0.9)	Post Run actions/checkout@v5	2026-09-16T13:36:30.0496740Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+probe (6.0.9)	Post Run actions/checkout@v5	2026-09-16T13:36:30.0530709Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+probe (6.0.9)	Complete job	﻿2026-09-16T13:36:30.0887128Z Cleaning up orphan processes
+probe (5.0.7)	Set up job	﻿2026-09-16T13:36:04.5403335Z Current runner version: '2.337.0'
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5434876Z ##[group]Runner Image Provisioner
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5436109Z Hosted Compute Agent
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5436742Z Version: 20260828.587
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5437386Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5438243Z Build Date: 2026-08-28T16:44:25Z
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5439460Z Worker ID: {520521d2-3978-440e-a83e-bd23a3194fee}
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5440269Z Azure Region: westus3
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5440870Z ##[endgroup]
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5442901Z ##[group]Operating System
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5443771Z Ubuntu
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5444344Z 24.04.5
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5444906Z LTS
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5445455Z ##[endgroup]
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5446022Z ##[group]Runner Image
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5446723Z Image: ubuntu-24.04-arm
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5447345Z Version: 20260907.118.1
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5448472Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24-arm64/20260907.118/images/ubuntu/Ubuntu2404-Arm64-Readme.md
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5450713Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24-arm64%2F20260907.118
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5451813Z ##[endgroup]
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5454820Z ##[group]GITHUB_TOKEN Permissions
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5458677Z Actions: write
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5459876Z ArtifactMetadata: write
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5460651Z Attestations: write
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5461375Z Checks: write
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5461965Z CodeQuality: write
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5462595Z Contents: write
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5463171Z CopilotRequests: write
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5463778Z Deployments: write
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5464476Z Discussions: write
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5465022Z Drives: write
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5465603Z Issues: write
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5466158Z Metadata: read
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5466947Z Models: read
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5467671Z Packages: write
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5468221Z Pages: write
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5469031Z PullRequests: write
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5469709Z RepositoryProjects: write
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5470449Z SecurityEvents: write
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5471119Z Statuses: write
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5471709Z VulnerabilityAlerts: read
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5472373Z ##[endgroup]
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5475415Z Secret source: Actions
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5476571Z Cache mode: write
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5477548Z Prepare workflow directory
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5871370Z Prepare all required actions
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.5926504Z Getting action download info
+probe (5.0.7)	Set up job	2026-09-16T13:36:04.9302332Z Download action repository 'actions/checkout@v5' (SHA:fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09)
+probe (5.0.7)	Set up job	2026-09-16T13:36:05.1506246Z Complete job name: probe (5.0.7)
+probe (5.0.7)	Run actions/checkout@v5	﻿2026-09-16T13:36:05.2321638Z ##[group]Run actions/checkout@v5
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.2322951Z with:
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.2323805Z   repository: MeshInspector/emsdk-wstring-convert
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.2327519Z   token: ***
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.2328179Z   ssh-strict: true
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.2328958Z   ssh-user: git
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.2329550Z   persist-credentials: true
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.2330298Z   clean: true
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.2330909Z   sparse-checkout-cone-mode: true
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.2331617Z   fetch-depth: 1
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.2332188Z   fetch-tags: false
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.2332766Z   show-progress: true
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.2333435Z   lfs: false
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.2334003Z   submodules: false
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.2334620Z   set-safe-directory: true
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.2335264Z   allow-unsafe-pr-checkout: false
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.2336476Z ##[endgroup]
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.3196020Z Syncing repository: MeshInspector/emsdk-wstring-convert
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.3198609Z ##[group]Getting Git version info
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.3199958Z Working directory is '/home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert'
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.3201685Z [command]/usr/bin/git version
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.3218191Z git version 2.55.0
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.3236238Z ##[endgroup]
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.3248678Z Temporarily overriding HOME='/home/runner/work/_temp/060012a6-a64b-4a93-85b4-4ac682b79658' before making global git config changes
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.3251487Z Adding repository directory to the temporary git global config as a safe directory
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.3253647Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.3286014Z Deleting the contents of '/home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert'
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.3290592Z ##[group]Initializing the repository
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.3294936Z [command]/usr/bin/git init /home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.3357881Z hint: Using 'master' as the name for the initial branch. This default branch name
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.3359460Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.3360917Z hint: to use in all of your new repositories, which will suppress this warning,
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.3361958Z hint: call:
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.3362643Z hint:
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.3363757Z hint: 	git config --global init.defaultBranch <name>
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.3365362Z hint:
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.3366304Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.3367333Z hint: 'development'. The just-created branch can be renamed via this command:
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.3368262Z hint:
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.3369194Z hint: 	git branch -m <name>
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.3369837Z hint:
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.3370642Z hint: Disable this message with "git config set advice.defaultBranchName false"
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.3371902Z Initialized empty Git repository in /home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert/.git/
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.3374160Z [command]/usr/bin/git remote add origin https://github.com/MeshInspector/emsdk-wstring-convert
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.3400546Z ##[endgroup]
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.3401549Z ##[group]Disabling automatic garbage collection
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.3403796Z [command]/usr/bin/git config --local gc.auto 0
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.3429715Z ##[endgroup]
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.3430741Z ##[group]Setting up auth
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.3434890Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.3462630Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.3721514Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.3747529Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.3930217Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.3959620Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.4144595Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.4178270Z ##[endgroup]
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.4179607Z ##[group]Fetching the repository
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:05.4186988Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +66234a7084c5eb960d47cdd17cf6e18bf150001d:refs/remotes/origin/sjlj0
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:06.0151131Z From https://github.com/MeshInspector/emsdk-wstring-convert
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:06.0152320Z  * [new ref]         66234a7084c5eb960d47cdd17cf6e18bf150001d -> origin/sjlj0
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:06.0154761Z ##[endgroup]
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:06.0155844Z ##[group]Determining the checkout info
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:06.0157023Z ##[endgroup]
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:06.0162761Z [command]/usr/bin/git sparse-checkout disable
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:06.0198033Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:06.0263917Z ##[group]Checking out the ref
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:06.0265112Z [command]/usr/bin/git checkout --progress --force -B sjlj0 refs/remotes/origin/sjlj0
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:06.0266214Z Switched to a new branch 'sjlj0'
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:06.0267665Z branch 'sjlj0' set up to track 'origin/sjlj0'.
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:06.0270609Z ##[endgroup]
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:06.0306309Z [command]/usr/bin/git log -1 --format=%H
+probe (5.0.7)	Run actions/checkout@v5	2026-09-16T13:36:06.0326676Z 66234a7084c5eb960d47cdd17cf6e18bf150001d
+probe (5.0.7)	Run the cases	﻿2026-09-16T13:36:06.0604220Z ##[group]Run IMG=emscripten/emsdk:5.0.7-arm64
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.0605568Z [36;1mIMG=emscripten/emsdk:5.0.7-arm64[0m
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.0607052Z [36;1mPATCH=''[0m
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.0607734Z [36;1mcat > run.sh <<'SH'[0m
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.0608524Z [36;1mset -u[0m
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.0609456Z [36;1mcd /src[0m
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.0610130Z [36;1mif [ -n "$PATCH" ]; then[0m
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.0611749Z [36;1m  curl -sfL "https://github.com/emscripten-core/emscripten/commit/$PATCH.patch" -o /tmp/fix.patch[0m
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.0614714Z [36;1m  (cd /emsdk/upstream/emscripten && git apply --exclude='test/*' --exclude='ChangeLog.md' /tmp/fix.patch) && echo "PATCH applied: $PATCH" || { echo "PATCH FAILED"; exit 1; }[0m
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.0617426Z [36;1m  grep -n "SUPPORT_LONGJMP == 'emscripten'" /emsdk/upstream/emscripten/tools/link.py | head -3[0m
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.0619224Z [36;1mfi[0m
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.0619881Z [36;1memcc --version | head -1[0m
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.0620812Z [36;1mrun() { # name, then the command[0m
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.0621748Z [36;1m  name=$1; shift[0m
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.0622563Z [36;1m  echo "::group::$name: $*"[0m
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.0623433Z [36;1m  "$@" > /tmp/$name.log 2>&1; rc=$?[0m
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.0624359Z [36;1m  cat /tmp/$name.log[0m
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.0625168Z [36;1m  echo "::endgroup::"[0m
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.0626366Z [36;1m  if grep -q "JSC_UNDEFINED_VARIABLE" /tmp/$name.log; then kind=closure-undeclared[0m
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.0628411Z [36;1m  elif grep -qi "AssertionError\|Internal compiler error\|Traceback" /tmp/$name.log; then kind=internal-error[0m
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.0630480Z [36;1m  elif grep -qi "error:" /tmp/$name.log; then kind=error[0m
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.0631595Z [36;1m  elif [ $rc -eq 0 ]; then kind=ok[0m
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.0632529Z [36;1m  else kind=rc$rc; fi[0m
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.0633758Z [36;1m  echo "RESULT version=$VERSION patch=${PATCH:-none} case=$name rc=$rc kind=$kind"[0m
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.0635039Z [36;1m}[0m
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.0635771Z [36;1memcc -fexceptions -c a.cpp -O2 -o a.o[0m
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.0636891Z [36;1mrun A_default_link_closure      emcc a.o -O2 --closure=1 -o a.js[0m
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.0638424Z [36;1mrun B_longjmp0_link             emcc a.o -O2 -sSUPPORT_LONGJMP=0 -o b.js[0m
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.0640280Z [36;1mrun C_longjmp0_link_closure     emcc a.o -O2 -sSUPPORT_LONGJMP=0 --closure=1 -o c.js[0m
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.0641965Z [36;1memcc -fexceptions -sSUPPORT_LONGJMP=0 -c a.cpp -O2 -o a0.o[0m
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.0643503Z [36;1mrun D_longjmp0_both_closure     emcc a0.o -O2 -sSUPPORT_LONGJMP=0 --closure=1 -o d.js[0m
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.0645234Z [36;1mrun E_longjmp0_link_assertions  emcc a.o -O2 -sSUPPORT_LONGJMP=0 -sASSERTIONS=1 -o e.js[0m
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.0647617Z [36;1m[ -f b.js ] && { echo "::group::b.js invoke/setThrew occurrences"; grep -o "invoke_[a-z]*\|_setThrew\|stackSave" b.js | sort | uniq -c; echo "::endgroup::"; }[0m
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.0649673Z [36;1mexit 0[0m
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.0650399Z [36;1mSH[0m
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.0651486Z [36;1mdocker run --rm -e VERSION=5.0.7 -e PATCH="$PATCH" -v "$PWD:/src" -w /src $IMG bash run.sh[0m
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.0747495Z shell: /usr/bin/bash -e {0}
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.0748390Z ##[endgroup]
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.1454765Z Unable to find image 'emscripten/emsdk:5.0.7-arm64' locally
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.9491397Z 5.0.7-arm64: Pulling from emscripten/emsdk
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.9495523Z 818154cda96d: Pulling fs layer
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.9495978Z 91141bd1aae6: Pulling fs layer
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.9496978Z c3410f6229f9: Pulling fs layer
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.9497418Z eccbe9f062c2: Pulling fs layer
+probe (5.0.7)	Run the cases	2026-09-16T13:36:06.9497750Z eccbe9f062c2: Waiting
+probe (5.0.7)	Run the cases	2026-09-16T13:36:07.1904276Z 818154cda96d: Verifying Checksum
+probe (5.0.7)	Run the cases	2026-09-16T13:36:07.1911404Z 818154cda96d: Download complete
+probe (5.0.7)	Run the cases	2026-09-16T13:36:07.3723620Z eccbe9f062c2: Verifying Checksum
+probe (5.0.7)	Run the cases	2026-09-16T13:36:07.3727326Z eccbe9f062c2: Download complete
+probe (5.0.7)	Run the cases	2026-09-16T13:36:07.7225426Z c3410f6229f9: Verifying Checksum
+probe (5.0.7)	Run the cases	2026-09-16T13:36:07.7226739Z c3410f6229f9: Download complete
+probe (5.0.7)	Run the cases	2026-09-16T13:36:08.3915018Z 818154cda96d: Pull complete
+probe (5.0.7)	Run the cases	2026-09-16T13:36:08.5445393Z 91141bd1aae6: Verifying Checksum
+probe (5.0.7)	Run the cases	2026-09-16T13:36:08.5445910Z 91141bd1aae6: Download complete
+probe (5.0.7)	Run the cases	2026-09-16T13:36:20.3058586Z 91141bd1aae6: Pull complete
+probe (5.0.7)	Run the cases	2026-09-16T13:36:26.8224039Z c3410f6229f9: Pull complete
+probe (5.0.7)	Run the cases	2026-09-16T13:36:26.8303907Z eccbe9f062c2: Pull complete
+probe (5.0.7)	Run the cases	2026-09-16T13:36:26.8335959Z Digest: sha256:19b3a361d84262c1cd133a29fb84368678bab32aee47e074fcd83a216566330c
+probe (5.0.7)	Run the cases	2026-09-16T13:36:26.8345897Z Status: Downloaded newer image for emscripten/emsdk:5.0.7-arm64
+probe (5.0.7)	Run the cases	2026-09-16T13:36:27.1386304Z emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 5.0.7 (263db4cffa6f9fc2ec514a70abac81362ea41849)
+probe (5.0.7)	Run the cases	2026-09-16T13:36:27.6636671Z ##[group]A_default_link_closure: emcc a.o -O2 --closure=1 -o a.js
+probe (5.0.7)	Run the cases	2026-09-16T13:36:29.6714877Z building:ERROR: Closure compiler run failed:
+probe (5.0.7)	Run the cases	2026-09-16T13:36:29.6734843Z 
+probe (5.0.7)	Run the cases	2026-09-16T13:36:29.6735655Z building:ERROR: /tmp/emscripten_temp_0lbz2bo5/a.jso1.js:501:2: ERROR - [JSC_UNDEFINED_VARIABLE] variable setTempRet0 is undeclared
+probe (5.0.7)	Run the cases	2026-09-16T13:36:29.6736447Z   501|   setTempRet0(0);
+probe (5.0.7)	Run the cases	2026-09-16T13:36:29.6736866Z          ^^^^^^^^^^^
+probe (5.0.7)	Run the cases	2026-09-16T13:36:29.6737022Z 
+probe (5.0.7)	Run the cases	2026-09-16T13:36:29.6737369Z /tmp/emscripten_temp_0lbz2bo5/a.jso1.js:676:4: ERROR - [JSC_UNDEFINED_VARIABLE] variable _setThrew is undeclared
+probe (5.0.7)	Run the cases	2026-09-16T13:36:29.6737912Z   676|     _setThrew(1, 0);
+probe (5.0.7)	Run the cases	2026-09-16T13:36:29.6738237Z            ^^^^^^^^^
+probe (5.0.7)	Run the cases	2026-09-16T13:36:29.6738383Z 
+probe (5.0.7)	Run the cases	2026-09-16T13:36:29.6738536Z 2 error(s), 0 warning(s)
+probe (5.0.7)	Run the cases	2026-09-16T13:36:29.6738933Z 
+probe (5.0.7)	Run the cases	2026-09-16T13:36:29.6749528Z emcc: error: closure compiler failed (rc: 2): /emsdk/node/22.16.0_64bit/bin/node --max_old_space_size=8192 /emsdk/upstream/emscripten/node_modules/.bin/google-closure-compiler --compilation_level ADVANCED_OPTIMIZATIONS --language_in UNSTABLE --language_out NO_TRANSPILE --emit_use_strict=false --assume_static_inheritance_is_not_used=false --charset=UTF8 --externs /emsdk/upstream/emscripten/src/closure-externs/closure-externs.js --externs /emsdk/upstream/emscripten/src/closure-externs/node-externs.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/punycode.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/vm.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/util.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/querystring.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/dgram.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/dns.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/domain.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/net.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/readline.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/core.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/zlib.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/stream.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/os.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/process.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/cluster.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/fs.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/tls.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/tty.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/string_decoder.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/path.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/events.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/https.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/repl.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/child_process.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/url.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/http.js --externs /emsdk/upstream/emscripten/third_party/closure-compiler/node-externs/buffer.js --js /tmp/emscripten_temp_0lbz2bo5/a.jso1.js --js_output_file tmp2v1iwdqv.cc.js the error message may be clearer with -g1 and EMCC_DEBUG=2 set
+probe (5.0.7)	Run the cases	2026-09-16T13:36:29.6772160Z ##[endgroup]
+probe (5.0.7)	Run the cases	2026-09-16T13:36:29.6772618Z RESULT version=5.0.7 patch=none case=A_default_link_closure rc=1 kind=closure-undeclared
+probe (5.0.7)	Run the cases	2026-09-16T13:36:29.6773461Z ##[group]B_longjmp0_link: emcc a.o -O2 -sSUPPORT_LONGJMP=0 -o b.js
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.1111303Z Traceback (most recent call last):
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.1111882Z   File "/emsdk/upstream/emscripten/emcc.py", line 586, in <module>
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.1112358Z     sys.exit(main(sys.argv))
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.1112621Z              ^^^^^^^^^^^^^^
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.1112949Z   File "/usr/lib/python3.12/contextlib.py", line 81, in inner
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.1113344Z     return func(*args, **kwds)
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.1113623Z            ^^^^^^^^^^^^^^^^^^^
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.1114067Z   File "/emsdk/upstream/emscripten/emcc.py", line 328, in main
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.1114435Z     return link.run(options, linker_args)
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.1114712Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.1115167Z   File "/emsdk/upstream/emscripten/tools/link.py", line 3155, in run
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.1115672Z     phase_post_link(options, wasm_target, wasm_target, target, js_syms, base_metadata)
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.1116180Z   File "/usr/lib/python3.12/contextlib.py", line 81, in inner
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.1116538Z     return func(*args, **kwds)
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.1116795Z            ^^^^^^^^^^^^^^^^^^^
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.1117250Z   File "/emsdk/upstream/emscripten/tools/link.py", line 1898, in phase_post_link
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.1117767Z     metadata = phase_emscript(in_wasm, wasm_target, js_syms, base_metadata)
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.1118212Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.1118595Z   File "/usr/lib/python3.12/contextlib.py", line 81, in inner
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.1119217Z     return func(*args, **kwds)
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.1119545Z            ^^^^^^^^^^^^^^^^^^^
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.1119914Z   File "/emsdk/upstream/emscripten/tools/link.py", line 1930, in phase_emscript
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.1120577Z     metadata = emscripten.emscript(in_wasm, wasm_target, final_js, js_syms, base_metadata=base_metadata)
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.1121158Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.1121628Z   File "/emsdk/upstream/emscripten/tools/emscripten.py", line 469, in emscript
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.1122191Z     parts += create_module(metadata, function_exports, other_exports,
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.1122595Z              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.1123052Z   File "/emsdk/upstream/emscripten/tools/emscripten.py", line 1100, in create_module
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.1123738Z     assert not metadata.invoke_funcs, "invoke_ functions exported but exceptions and longjmp are both disabled"
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.1124276Z            ^^^^^^^^^^^^^^^^^^^^^^^^^
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.1124767Z AssertionError: invoke_ functions exported but exceptions and longjmp are both disabled
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.1126049Z ##[endgroup]
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.1128864Z RESULT version=5.0.7 patch=none case=B_longjmp0_link rc=1 kind=internal-error
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.1130156Z ##[group]C_longjmp0_link_closure: emcc a.o -O2 -sSUPPORT_LONGJMP=0 --closure=1 -o c.js
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.5444473Z Traceback (most recent call last):
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.5445394Z   File "/emsdk/upstream/emscripten/emcc.py", line 586, in <module>
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.5446288Z     sys.exit(main(sys.argv))
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.5446691Z              ^^^^^^^^^^^^^^
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.5447215Z   File "/usr/lib/python3.12/contextlib.py", line 81, in inner
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.5447759Z     return func(*args, **kwds)
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.5448255Z            ^^^^^^^^^^^^^^^^^^^
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.5449027Z   File "/emsdk/upstream/emscripten/emcc.py", line 328, in main
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.5449592Z     return link.run(options, linker_args)
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.5450908Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.5451769Z   File "/emsdk/upstream/emscripten/tools/link.py", line 3155, in run
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.5452803Z     phase_post_link(options, wasm_target, wasm_target, target, js_syms, base_metadata)
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.5453371Z   File "/usr/lib/python3.12/contextlib.py", line 81, in inner
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.5453726Z     return func(*args, **kwds)
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.5454187Z            ^^^^^^^^^^^^^^^^^^^
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.5454567Z   File "/emsdk/upstream/emscripten/tools/link.py", line 1898, in phase_post_link
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.5455152Z     metadata = phase_emscript(in_wasm, wasm_target, js_syms, base_metadata)
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.5455569Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.5455941Z   File "/usr/lib/python3.12/contextlib.py", line 81, in inner
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.5456357Z     return func(*args, **kwds)
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.5456608Z            ^^^^^^^^^^^^^^^^^^^
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.5457002Z   File "/emsdk/upstream/emscripten/tools/link.py", line 1930, in phase_emscript
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.5457640Z     metadata = emscripten.emscript(in_wasm, wasm_target, final_js, js_syms, base_metadata=base_metadata)
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.5458177Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.5458712Z   File "/emsdk/upstream/emscripten/tools/emscripten.py", line 469, in emscript
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.5459439Z     parts += create_module(metadata, function_exports, other_exports,
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.5459895Z              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.5460362Z   File "/emsdk/upstream/emscripten/tools/emscripten.py", line 1100, in create_module
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.5461009Z     assert not metadata.invoke_funcs, "invoke_ functions exported but exceptions and longjmp are both disabled"
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.5461609Z            ^^^^^^^^^^^^^^^^^^^^^^^^^
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.5462025Z AssertionError: invoke_ functions exported but exceptions and longjmp are both disabled
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.5463959Z ##[endgroup]
+probe (5.0.7)	Run the cases	2026-09-16T13:36:30.5464399Z RESULT version=5.0.7 patch=none case=C_longjmp0_link_closure rc=1 kind=internal-error
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.0564458Z ##[group]D_longjmp0_both_closure: emcc a0.o -O2 -sSUPPORT_LONGJMP=0 --closure=1 -o d.js
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.3378692Z Traceback (most recent call last):
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.3379382Z   File "/emsdk/upstream/emscripten/emcc.py", line 586, in <module>
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.3380009Z     sys.exit(main(sys.argv))
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.3380270Z              ^^^^^^^^^^^^^^
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.3380571Z   File "/usr/lib/python3.12/contextlib.py", line 81, in inner
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.3381017Z     return func(*args, **kwds)
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.3381272Z            ^^^^^^^^^^^^^^^^^^^
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.3381646Z   File "/emsdk/upstream/emscripten/emcc.py", line 328, in main
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.3382016Z     return link.run(options, linker_args)
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.3382296Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.3383021Z   File "/emsdk/upstream/emscripten/tools/link.py", line 3155, in run
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.3383525Z     phase_post_link(options, wasm_target, wasm_target, target, js_syms, base_metadata)
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.3384040Z   File "/usr/lib/python3.12/contextlib.py", line 81, in inner
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.3384399Z     return func(*args, **kwds)
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.3384674Z            ^^^^^^^^^^^^^^^^^^^
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.3385098Z   File "/emsdk/upstream/emscripten/tools/link.py", line 1898, in phase_post_link
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.3385775Z     metadata = phase_emscript(in_wasm, wasm_target, js_syms, base_metadata)
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.3386210Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.3386601Z   File "/usr/lib/python3.12/contextlib.py", line 81, in inner
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.3386970Z     return func(*args, **kwds)
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.3387247Z            ^^^^^^^^^^^^^^^^^^^
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.3387612Z   File "/emsdk/upstream/emscripten/tools/link.py", line 1930, in phase_emscript
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.3388215Z     metadata = emscripten.emscript(in_wasm, wasm_target, final_js, js_syms, base_metadata=base_metadata)
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.3389085Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.3389638Z   File "/emsdk/upstream/emscripten/tools/emscripten.py", line 469, in emscript
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.3390177Z     parts += create_module(metadata, function_exports, other_exports,
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.3390614Z              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.3391051Z   File "/emsdk/upstream/emscripten/tools/emscripten.py", line 1100, in create_module
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.3391751Z     assert not metadata.invoke_funcs, "invoke_ functions exported but exceptions and longjmp are both disabled"
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.3392279Z            ^^^^^^^^^^^^^^^^^^^^^^^^^
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.3392786Z AssertionError: invoke_ functions exported but exceptions and longjmp are both disabled
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.3393766Z ##[endgroup]
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.3395437Z RESULT version=5.0.7 patch=none case=D_longjmp0_both_closure rc=1 kind=internal-error
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.3396584Z ##[group]E_longjmp0_link_assertions: emcc a.o -O2 -sSUPPORT_LONGJMP=0 -sASSERTIONS=1 -o e.js
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.7803466Z Traceback (most recent call last):
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.7804821Z   File "/emsdk/upstream/emscripten/emcc.py", line 586, in <module>
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.7805308Z     sys.exit(main(sys.argv))
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.7805557Z              ^^^^^^^^^^^^^^
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.7805942Z   File "/usr/lib/python3.12/contextlib.py", line 81, in inner
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.7806295Z     return func(*args, **kwds)
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.7806622Z            ^^^^^^^^^^^^^^^^^^^
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.7806947Z   File "/emsdk/upstream/emscripten/emcc.py", line 328, in main
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.7807313Z     return link.run(options, linker_args)
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.7807657Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.7808059Z   File "/emsdk/upstream/emscripten/tools/link.py", line 3155, in run
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.7809309Z     phase_post_link(options, wasm_target, wasm_target, target, js_syms, base_metadata)
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.7810053Z   File "/usr/lib/python3.12/contextlib.py", line 81, in inner
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.7810411Z     return func(*args, **kwds)
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.7810708Z            ^^^^^^^^^^^^^^^^^^^
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.7811140Z   File "/emsdk/upstream/emscripten/tools/link.py", line 1898, in phase_post_link
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.7811662Z     metadata = phase_emscript(in_wasm, wasm_target, js_syms, base_metadata)
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.7812155Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.7812529Z   File "/usr/lib/python3.12/contextlib.py", line 81, in inner
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.7812909Z     return func(*args, **kwds)
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.7813180Z            ^^^^^^^^^^^^^^^^^^^
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.7813535Z   File "/emsdk/upstream/emscripten/tools/link.py", line 1930, in phase_emscript
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.7814459Z     metadata = emscripten.emscript(in_wasm, wasm_target, final_js, js_syms, base_metadata=base_metadata)
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.7815001Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.7815503Z   File "/emsdk/upstream/emscripten/tools/emscripten.py", line 469, in emscript
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.7816037Z     parts += create_module(metadata, function_exports, other_exports,
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.7816567Z              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.7817050Z   File "/emsdk/upstream/emscripten/tools/emscripten.py", line 1100, in create_module
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.7817692Z     assert not metadata.invoke_funcs, "invoke_ functions exported but exceptions and longjmp are both disabled"
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.7818227Z            ^^^^^^^^^^^^^^^^^^^^^^^^^
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.7818669Z AssertionError: invoke_ functions exported but exceptions and longjmp are both disabled
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.7819949Z ##[endgroup]
+probe (5.0.7)	Run the cases	2026-09-16T13:36:31.7831997Z RESULT version=5.0.7 patch=none case=E_longjmp0_link_assertions rc=1 kind=internal-error
+probe (5.0.7)	Post Run actions/checkout@v5	﻿2026-09-16T13:36:31.8696358Z Post job cleanup.
+probe (5.0.7)	Post Run actions/checkout@v5	2026-09-16T13:36:31.9399465Z [command]/usr/bin/git version
+probe (5.0.7)	Post Run actions/checkout@v5	2026-09-16T13:36:31.9433853Z git version 2.55.0
+probe (5.0.7)	Post Run actions/checkout@v5	2026-09-16T13:36:31.9467266Z Temporarily overriding HOME='/home/runner/work/_temp/a8e258ce-f888-4ba5-bcf5-f8259a95ef70' before making global git config changes
+probe (5.0.7)	Post Run actions/checkout@v5	2026-09-16T13:36:31.9468253Z Adding repository directory to the temporary git global config as a safe directory
+probe (5.0.7)	Post Run actions/checkout@v5	2026-09-16T13:36:31.9472527Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert
+probe (5.0.7)	Post Run actions/checkout@v5	2026-09-16T13:36:31.9505588Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+probe (5.0.7)	Post Run actions/checkout@v5	2026-09-16T13:36:31.9538644Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+probe (5.0.7)	Post Run actions/checkout@v5	2026-09-16T13:36:31.9723408Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+probe (5.0.7)	Post Run actions/checkout@v5	2026-09-16T13:36:31.9743066Z http.https://github.com/.extraheader
+probe (5.0.7)	Post Run actions/checkout@v5	2026-09-16T13:36:31.9752449Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+probe (5.0.7)	Post Run actions/checkout@v5	2026-09-16T13:36:31.9781021Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+probe (5.0.7)	Post Run actions/checkout@v5	2026-09-16T13:36:31.9960787Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+probe (5.0.7)	Post Run actions/checkout@v5	2026-09-16T13:36:31.9988038Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+probe (5.0.7)	Complete job	﻿2026-09-16T13:36:32.0308188Z Cleaning up orphan processes
