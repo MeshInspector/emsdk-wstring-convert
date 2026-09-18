@@ -1,0 +1,502 @@
+Current runner version: '2.337.0'
+##[group]Runner Image Provisioner
+Hosted Compute Agent
+Version: 20260828.587
+Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+Build Date: 2026-08-28T16:44:25Z
+Worker ID: {dd4f1476-5ffe-4969-b175-245010ba92a8}
+Azure Region: eastus
+##[endgroup]
+##[group]Operating System
+Ubuntu
+24.04.5
+LTS
+##[endgroup]
+##[group]Runner Image
+Image: ubuntu-24.04-arm
+Version: 20260907.118.1
+Included Software: https://github.com/actions/runner-images/blob/ubuntu24-arm64/20260907.118/images/ubuntu/Ubuntu2404-Arm64-Readme.md
+Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24-arm64%2F20260907.118
+##[endgroup]
+##[group]GITHUB_TOKEN Permissions
+Actions: write
+ArtifactMetadata: write
+Attestations: write
+Checks: write
+CodeQuality: write
+Contents: write
+CopilotRequests: write
+Deployments: write
+Discussions: write
+Drives: write
+Issues: write
+Metadata: read
+Models: read
+Packages: write
+Pages: write
+PullRequests: write
+RepositoryProjects: write
+SecurityEvents: write
+Statuses: write
+VulnerabilityAlerts: read
+##[endgroup]
+Secret source: Actions
+Cache mode: write
+Prepare workflow directory
+Prepare all required actions
+Getting action download info
+Download action repository 'actions/checkout@v5' (SHA:fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09)
+Complete job name: probe (5.0.7)
+##[group]Run actions/checkout@v5
+with:
+  repository: MeshInspector/emsdk-wstring-convert
+  token: ***
+  ssh-strict: true
+  ssh-user: git
+  persist-credentials: true
+  clean: true
+  sparse-checkout-cone-mode: true
+  fetch-depth: 1
+  fetch-tags: false
+  show-progress: true
+  lfs: false
+  submodules: false
+  set-safe-directory: true
+  allow-unsafe-pr-checkout: false
+##[endgroup]
+Syncing repository: MeshInspector/emsdk-wstring-convert
+##[group]Getting Git version info
+Working directory is '/home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert'
+[command]/usr/bin/git version
+git version 2.55.0
+##[endgroup]
+Temporarily overriding HOME='/home/runner/work/_temp/5f1c469c-6d8e-4983-baf6-848be9ba0e1a' before making global git config changes
+Adding repository directory to the temporary git global config as a safe directory
+[command]/usr/bin/git config --global --add safe.directory /home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert
+Deleting the contents of '/home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert'
+##[group]Initializing the repository
+[command]/usr/bin/git init /home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: will change to "main" in Git 3.0. To configure the initial branch name
+hint: to use in all of your new repositories, which will suppress this warning,
+hint: call:
+hint:
+hint: 	git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint: 	git branch -m <name>
+hint:
+hint: Disable this message with "git config set advice.defaultBranchName false"
+Initialized empty Git repository in /home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert/.git/
+[command]/usr/bin/git remote add origin https://github.com/MeshInspector/emsdk-wstring-convert
+##[endgroup]
+##[group]Disabling automatic garbage collection
+[command]/usr/bin/git config --local gc.auto 0
+##[endgroup]
+##[group]Setting up auth
+[command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+[command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+[command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+[command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+[command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+[command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+[command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+##[endgroup]
+##[group]Fetching the repository
+[command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +6339a1cb27daef9fd744899def02c3a8eb3be6a4:refs/remotes/origin/closure-fs
+From https://github.com/MeshInspector/emsdk-wstring-convert
+ * [new ref]         6339a1cb27daef9fd744899def02c3a8eb3be6a4 -> origin/closure-fs
+##[endgroup]
+##[group]Determining the checkout info
+##[endgroup]
+[command]/usr/bin/git sparse-checkout disable
+[command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+##[group]Checking out the ref
+[command]/usr/bin/git checkout --progress --force -B closure-fs refs/remotes/origin/closure-fs
+Switched to a new branch 'closure-fs'
+branch 'closure-fs' set up to track 'origin/closure-fs'.
+##[endgroup]
+[command]/usr/bin/git log -1 --format=%H
+6339a1cb27daef9fd744899def02c3a8eb3be6a4
+##[group]Run IMG=emscripten/emsdk:5.0.7-arm64
+[36;1mIMG=emscripten/emsdk:5.0.7-arm64[0m
+[36;1mcat > run.sh <<'SH'[0m
+[36;1mset -u; cd /src[0m
+[36;1memcc --version | head -1[0m
+[36;1mNODE=$(ls -d /emsdk/node/*/bin/node | head -1)[0m
+[36;1mgrep -o '"google-closure-compiler": *"[^"]*"' /emsdk/upstream/emscripten/package.json[0m
+[36;1mecho "::group::JS-level repro (fsshape.js)"[0m
+[36;1m$NODE /emsdk/upstream/emscripten/node_modules/google-closure-compiler/cli.js \[0m
+[36;1m  --compilation_level ADVANCED_OPTIMIZATIONS --language_in UNSTABLE --language_out NO_TRANSPILE \[0m
+[36;1m  --emit_use_strict=false --assume_static_inheritance_is_not_used=false --charset=UTF8 --js fsshape.js > /tmp/js.log 2>&1; rc=$?[0m
+[36;1mcat /tmp/js.log; echo "::endgroup::"[0m
+[36;1mecho "RESULT version=$VERSION case=fsshape rc=$rc wrong_count=$(grep -c JSC_WRONG_ARGUMENT_COUNT /tmp/js.log)"[0m
+[36;1mrun() { name=$1; shift; echo "::group::$name: $*"; "$@" > /tmp/$name.log 2>&1; rc=$?; grep -o "\[JSC_[A-Z_]*\]" /tmp/$name.log | sort | uniq -c; grep -o "Function [A-Za-z_.0-9]*: called with [0-9]* argument(s)" /tmp/$name.log | sort | uniq -c; tail -3 /tmp/$name.log; echo "::endgroup::"; echo "RESULT version=$VERSION case=$name rc=$rc wrong_count=$(grep -c JSC_WRONG_ARGUMENT_COUNT /tmp/$name.log) typed=$(grep -o '[0-9.]*% typed' /tmp/$name.log | tail -1)"; }[0m
+[36;1mMESHLIB="--bind -sMODULARIZE=1 -sEXPORT_NAME=createMeshLib -sEXPORT_ES6=1 -sALLOW_MEMORY_GROWTH=1 -sEXIT_RUNTIME=0 -sINVOKE_RUN=0"[0m
+[36;1mrun I_es6               em++ hello.cpp -O2 --bind -sEXPORT_ES6=1 --closure=1 -Wclosure -o i.mjs[0m
+[36;1mrun P_es6_wall_werror   em++ hello.cpp -O2 --bind -sEXPORT_ES6=1 --closure=1 -Wall -Werror -o p.mjs[0m
+[36;1mrun Q_es6_werror        em++ hello.cpp -O2 --bind -sEXPORT_ES6=1 --closure=1 -Werror -o q.mjs[0m
+[36;1mrun R_es6_default       em++ hello.cpp -O2 --bind -sEXPORT_ES6=1 --closure=1 -o r.mjs[0m
+[36;1mrun S_es6_wall          em++ hello.cpp -O2 --bind -sEXPORT_ES6=1 --closure=1 -Wall -o s.mjs[0m
+[36;1mrun U_es6_minify0       em++ hello.cpp -O2 --bind -sEXPORT_ES6=1 --closure=1 -Wclosure --minify=0 -o u.mjs[0m
+[36;1mrun V_es6_plain_cpp     em++ hello2.cpp -O2 -sEXPORT_ES6=1 --closure=1 -Wclosure -o v.mjs[0m
+[36;1mrun W_es6_c_hello       emcc /emsdk/upstream/emscripten/test/hello_world.c -O2 -sEXPORT_ES6=1 --closure=1 -Wclosure -o w.mjs[0m
+[36;1mexit 0[0m
+[36;1mSH[0m
+[36;1mdocker run --rm -e VERSION=5.0.7 -v "$PWD:/src" -w /src $IMG bash run.sh[0m
+shell: /usr/bin/bash -e {0}
+##[endgroup]
+Unable to find image 'emscripten/emsdk:5.0.7-arm64' locally
+5.0.7-arm64: Pulling from emscripten/emsdk
+818154cda96d: Pulling fs layer
+91141bd1aae6: Pulling fs layer
+c3410f6229f9: Pulling fs layer
+eccbe9f062c2: Pulling fs layer
+eccbe9f062c2: Waiting
+818154cda96d: Verifying Checksum
+818154cda96d: Download complete
+eccbe9f062c2: Verifying Checksum
+eccbe9f062c2: Download complete
+c3410f6229f9: Verifying Checksum
+c3410f6229f9: Download complete
+818154cda96d: Pull complete
+91141bd1aae6: Verifying Checksum
+91141bd1aae6: Download complete
+91141bd1aae6: Pull complete
+c3410f6229f9: Pull complete
+eccbe9f062c2: Pull complete
+Digest: sha256:19b3a361d84262c1cd133a29fb84368678bab32aee47e074fcd83a216566330c
+Status: Downloaded newer image for emscripten/emsdk:5.0.7-arm64
+emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 5.0.7 (263db4cffa6f9fc2ec514a70abac81362ea41849)
+"google-closure-compiler": "20240317.0.0"
+##[group]JS-level repro (fsshape.js)
+fsshape.js:8:21: WARNING - [JSC_WRONG_ARGUMENT_COUNT] Function FS.init: called with 0 argument(s). Function requires at least 3 argument(s) and no more than 3 argument(s).
+  8| if (!FS.initialized) FS.init();
+                          ^^^^^^^^^
+
+0 error(s), 1 warning(s), 65.3% typed
+var d={g:!1,h(a,b,c){return[a,b,c]},j(a,b,c){return[a,b,c]}};d.g||(d.g=!0);globalThis.i=d;
+##[endgroup]
+RESULT version=5.0.7 case=fsshape rc=0 wrong_count=1
+##[group]I_es6: em++ hello.cpp -O2 --bind -sEXPORT_ES6=1 --closure=1 -Wclosure -o i.mjs
+##[endgroup]
+RESULT version=5.0.7 case=I_es6 rc=0 wrong_count=0 typed=
+##[group]P_es6_wall_werror: em++ hello.cpp -O2 --bind -sEXPORT_ES6=1 --closure=1 -Wall -Werror -o p.mjs
+##[endgroup]
+RESULT version=5.0.7 case=P_es6_wall_werror rc=0 wrong_count=0 typed=
+##[group]Q_es6_werror: em++ hello.cpp -O2 --bind -sEXPORT_ES6=1 --closure=1 -Werror -o q.mjs
+##[endgroup]
+RESULT version=5.0.7 case=Q_es6_werror rc=0 wrong_count=0 typed=
+##[group]R_es6_default: em++ hello.cpp -O2 --bind -sEXPORT_ES6=1 --closure=1 -o r.mjs
+##[endgroup]
+RESULT version=5.0.7 case=R_es6_default rc=0 wrong_count=0 typed=
+##[group]S_es6_wall: em++ hello.cpp -O2 --bind -sEXPORT_ES6=1 --closure=1 -Wall -o s.mjs
+##[endgroup]
+RESULT version=5.0.7 case=S_es6_wall rc=0 wrong_count=0 typed=
+##[group]U_es6_minify0: em++ hello.cpp -O2 --bind -sEXPORT_ES6=1 --closure=1 -Wclosure --minify=0 -o u.mjs
+##[endgroup]
+RESULT version=5.0.7 case=U_es6_minify0 rc=0 wrong_count=0 typed=
+##[group]V_es6_plain_cpp: em++ hello2.cpp -O2 -sEXPORT_ES6=1 --closure=1 -Wclosure -o v.mjs
+##[endgroup]
+RESULT version=5.0.7 case=V_es6_plain_cpp rc=0 wrong_count=0 typed=
+##[group]W_es6_c_hello: emcc /emsdk/upstream/emscripten/test/hello_world.c -O2 -sEXPORT_ES6=1 --closure=1 -Wclosure -o w.mjs
+##[endgroup]
+RESULT version=5.0.7 case=W_es6_c_hello rc=0 wrong_count=0 typed=
+Post job cleanup.
+[command]/usr/bin/git version
+git version 2.55.0
+Temporarily overriding HOME='/home/runner/work/_temp/f0a21327-6472-43a5-8ebc-ef541f31a124' before making global git config changes
+Adding repository directory to the temporary git global config as a safe directory
+[command]/usr/bin/git config --global --add safe.directory /home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert
+[command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+[command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+[command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+http.https://github.com/.extraheader
+[command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+[command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+[command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+[command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Cleaning up orphan processes
+Current runner version: '2.337.0'
+##[group]Runner Image Provisioner
+Hosted Compute Agent
+Version: 20260828.587
+Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+Build Date: 2026-08-28T16:44:25Z
+Worker ID: {a2b87a86-babc-4a62-919e-186bb06c4a9a}
+Azure Region: northcentralus
+##[endgroup]
+##[group]Operating System
+Ubuntu
+24.04.5
+LTS
+##[endgroup]
+##[group]Runner Image
+Image: ubuntu-24.04-arm
+Version: 20260907.118.1
+Included Software: https://github.com/actions/runner-images/blob/ubuntu24-arm64/20260907.118/images/ubuntu/Ubuntu2404-Arm64-Readme.md
+Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24-arm64%2F20260907.118
+##[endgroup]
+##[group]GITHUB_TOKEN Permissions
+Actions: write
+ArtifactMetadata: write
+Attestations: write
+Checks: write
+CodeQuality: write
+Contents: write
+CopilotRequests: write
+Deployments: write
+Discussions: write
+Drives: write
+Issues: write
+Metadata: read
+Models: read
+Packages: write
+Pages: write
+PullRequests: write
+RepositoryProjects: write
+SecurityEvents: write
+Statuses: write
+VulnerabilityAlerts: read
+##[endgroup]
+Secret source: Actions
+Cache mode: write
+Prepare workflow directory
+Prepare all required actions
+Getting action download info
+Download action repository 'actions/checkout@v5' (SHA:fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09)
+Complete job name: probe (6.0.9)
+##[group]Run actions/checkout@v5
+with:
+  repository: MeshInspector/emsdk-wstring-convert
+  token: ***
+  ssh-strict: true
+  ssh-user: git
+  persist-credentials: true
+  clean: true
+  sparse-checkout-cone-mode: true
+  fetch-depth: 1
+  fetch-tags: false
+  show-progress: true
+  lfs: false
+  submodules: false
+  set-safe-directory: true
+  allow-unsafe-pr-checkout: false
+##[endgroup]
+Syncing repository: MeshInspector/emsdk-wstring-convert
+##[group]Getting Git version info
+Working directory is '/home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert'
+[command]/usr/bin/git version
+git version 2.55.0
+##[endgroup]
+Temporarily overriding HOME='/home/runner/work/_temp/dca53c75-cbbe-4f33-8dd8-c4be2c9f0ae3' before making global git config changes
+Adding repository directory to the temporary git global config as a safe directory
+[command]/usr/bin/git config --global --add safe.directory /home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert
+Deleting the contents of '/home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert'
+##[group]Initializing the repository
+[command]/usr/bin/git init /home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: will change to "main" in Git 3.0. To configure the initial branch name
+hint: to use in all of your new repositories, which will suppress this warning,
+hint: call:
+hint:
+hint: 	git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint: 	git branch -m <name>
+hint:
+hint: Disable this message with "git config set advice.defaultBranchName false"
+Initialized empty Git repository in /home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert/.git/
+[command]/usr/bin/git remote add origin https://github.com/MeshInspector/emsdk-wstring-convert
+##[endgroup]
+##[group]Disabling automatic garbage collection
+[command]/usr/bin/git config --local gc.auto 0
+##[endgroup]
+##[group]Setting up auth
+[command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+[command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+[command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+[command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+[command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+[command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+[command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+##[endgroup]
+##[group]Fetching the repository
+[command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +6339a1cb27daef9fd744899def02c3a8eb3be6a4:refs/remotes/origin/closure-fs
+From https://github.com/MeshInspector/emsdk-wstring-convert
+ * [new ref]         6339a1cb27daef9fd744899def02c3a8eb3be6a4 -> origin/closure-fs
+##[endgroup]
+##[group]Determining the checkout info
+##[endgroup]
+[command]/usr/bin/git sparse-checkout disable
+[command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+##[group]Checking out the ref
+[command]/usr/bin/git checkout --progress --force -B closure-fs refs/remotes/origin/closure-fs
+Switched to a new branch 'closure-fs'
+branch 'closure-fs' set up to track 'origin/closure-fs'.
+##[endgroup]
+[command]/usr/bin/git log -1 --format=%H
+6339a1cb27daef9fd744899def02c3a8eb3be6a4
+##[group]Run IMG=emscripten/emsdk:6.0.9-arm64
+[36;1mIMG=emscripten/emsdk:6.0.9-arm64[0m
+[36;1mcat > run.sh <<'SH'[0m
+[36;1mset -u; cd /src[0m
+[36;1memcc --version | head -1[0m
+[36;1mNODE=$(ls -d /emsdk/node/*/bin/node | head -1)[0m
+[36;1mgrep -o '"google-closure-compiler": *"[^"]*"' /emsdk/upstream/emscripten/package.json[0m
+[36;1mecho "::group::JS-level repro (fsshape.js)"[0m
+[36;1m$NODE /emsdk/upstream/emscripten/node_modules/google-closure-compiler/cli.js \[0m
+[36;1m  --compilation_level ADVANCED_OPTIMIZATIONS --language_in UNSTABLE --language_out NO_TRANSPILE \[0m
+[36;1m  --emit_use_strict=false --assume_static_inheritance_is_not_used=false --charset=UTF8 --js fsshape.js > /tmp/js.log 2>&1; rc=$?[0m
+[36;1mcat /tmp/js.log; echo "::endgroup::"[0m
+[36;1mecho "RESULT version=$VERSION case=fsshape rc=$rc wrong_count=$(grep -c JSC_WRONG_ARGUMENT_COUNT /tmp/js.log)"[0m
+[36;1mrun() { name=$1; shift; echo "::group::$name: $*"; "$@" > /tmp/$name.log 2>&1; rc=$?; grep -o "\[JSC_[A-Z_]*\]" /tmp/$name.log | sort | uniq -c; grep -o "Function [A-Za-z_.0-9]*: called with [0-9]* argument(s)" /tmp/$name.log | sort | uniq -c; tail -3 /tmp/$name.log; echo "::endgroup::"; echo "RESULT version=$VERSION case=$name rc=$rc wrong_count=$(grep -c JSC_WRONG_ARGUMENT_COUNT /tmp/$name.log) typed=$(grep -o '[0-9.]*% typed' /tmp/$name.log | tail -1)"; }[0m
+[36;1mMESHLIB="--bind -sMODULARIZE=1 -sEXPORT_NAME=createMeshLib -sEXPORT_ES6=1 -sALLOW_MEMORY_GROWTH=1 -sEXIT_RUNTIME=0 -sINVOKE_RUN=0"[0m
+[36;1mrun I_es6               em++ hello.cpp -O2 --bind -sEXPORT_ES6=1 --closure=1 -Wclosure -o i.mjs[0m
+[36;1mrun P_es6_wall_werror   em++ hello.cpp -O2 --bind -sEXPORT_ES6=1 --closure=1 -Wall -Werror -o p.mjs[0m
+[36;1mrun Q_es6_werror        em++ hello.cpp -O2 --bind -sEXPORT_ES6=1 --closure=1 -Werror -o q.mjs[0m
+[36;1mrun R_es6_default       em++ hello.cpp -O2 --bind -sEXPORT_ES6=1 --closure=1 -o r.mjs[0m
+[36;1mrun S_es6_wall          em++ hello.cpp -O2 --bind -sEXPORT_ES6=1 --closure=1 -Wall -o s.mjs[0m
+[36;1mrun U_es6_minify0       em++ hello.cpp -O2 --bind -sEXPORT_ES6=1 --closure=1 -Wclosure --minify=0 -o u.mjs[0m
+[36;1mrun V_es6_plain_cpp     em++ hello2.cpp -O2 -sEXPORT_ES6=1 --closure=1 -Wclosure -o v.mjs[0m
+[36;1mrun W_es6_c_hello       emcc /emsdk/upstream/emscripten/test/hello_world.c -O2 -sEXPORT_ES6=1 --closure=1 -Wclosure -o w.mjs[0m
+[36;1mexit 0[0m
+[36;1mSH[0m
+[36;1mdocker run --rm -e VERSION=6.0.9 -v "$PWD:/src" -w /src $IMG bash run.sh[0m
+shell: /usr/bin/bash -e {0}
+##[endgroup]
+Unable to find image 'emscripten/emsdk:6.0.9-arm64' locally
+6.0.9-arm64: Pulling from emscripten/emsdk
+0b613318ea87: Pulling fs layer
+d38f376254ce: Pulling fs layer
+bb0683b116f3: Pulling fs layer
+327dfd820399: Pulling fs layer
+327dfd820399: Waiting
+0b613318ea87: Verifying Checksum
+0b613318ea87: Download complete
+327dfd820399: Verifying Checksum
+327dfd820399: Download complete
+bb0683b116f3: Verifying Checksum
+bb0683b116f3: Download complete
+0b613318ea87: Pull complete
+d38f376254ce: Verifying Checksum
+d38f376254ce: Download complete
+d38f376254ce: Pull complete
+bb0683b116f3: Pull complete
+327dfd820399: Pull complete
+Digest: sha256:41039722671531506a7d081828721e9ccde93125d91f88351e0fe4301606c7d4
+Status: Downloaded newer image for emscripten/emsdk:6.0.9-arm64
+emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 6.0.9 (4e4223852a0835923411059a3929907d7df1232e)
+"google-closure-compiler": "20260726.0.0"
+##[group]JS-level repro (fsshape.js)
+fsshape.js:8:21: WARNING - [JSC_WRONG_ARGUMENT_COUNT] Function FS.init: called with 0 argument(s). Function requires at least 3 argument(s) and no more than 3 argument(s).
+  8| if (!FS.initialized) FS.init();
+                          ^^^^^^^^^
+
+0 error(s), 1 warning(s), 65.4% typed
+var d={g:!1,h(a,b,c){return[a,b,c]},j(a,b,c){return[a,b,c]},init(a,b,c){d.g=!0;return[a,b,c]}};d.g||d.init();globalThis.i=d;
+##[endgroup]
+RESULT version=6.0.9 case=fsshape rc=0 wrong_count=1
+##[group]I_es6: em++ hello.cpp -O2 --bind -sEXPORT_ES6=1 --closure=1 -Wclosure -o i.mjs
+      4 [JSC_TYPE_MISMATCH]
+     14 [JSC_WRONG_ARGUMENT_COUNT]
+      3 Function FS.chmod: called with 2 argument(s)
+      3 Function FS.createDevice: called with 3 argument(s)
+      1 Function FS.init: called with 0 argument(s)
+      3 Function FS.mkdev: called with 2 argument(s)
+      1 Function FS.stat: called with 1 argument(s)
+      2 Function FS.write: called with 5 argument(s)
+      1 Function SYSCALLS.calculateAt: called with 2 argument(s)
+0 error(s), 18 warning(s), 62.7% typed
+
+building:WARNING: (rerun with -g1 linker flag for an unminified output)
+##[endgroup]
+RESULT version=6.0.9 case=I_es6 rc=0 wrong_count=14 typed=62.7% typed
+##[group]P_es6_wall_werror: em++ hello.cpp -O2 --bind -sEXPORT_ES6=1 --closure=1 -Wall -Werror -o p.mjs
+      4 [JSC_TYPE_MISMATCH]
+     14 [JSC_WRONG_ARGUMENT_COUNT]
+      3 Function FS.chmod: called with 2 argument(s)
+      3 Function FS.createDevice: called with 3 argument(s)
+      1 Function FS.init: called with 0 argument(s)
+      3 Function FS.mkdev: called with 2 argument(s)
+      1 Function FS.stat: called with 1 argument(s)
+      2 Function FS.write: called with 5 argument(s)
+      1 Function SYSCALLS.calculateAt: called with 2 argument(s)
+
+building:WARNING: (rerun with -g1 linker flag for an unminified output)
+em++: error: closure compiler produced warnings and -W=error=closure enabled
+##[endgroup]
+RESULT version=6.0.9 case=P_es6_wall_werror rc=1 wrong_count=14 typed=62.7% typed
+##[group]Q_es6_werror: em++ hello.cpp -O2 --bind -sEXPORT_ES6=1 --closure=1 -Werror -o q.mjs
+##[endgroup]
+RESULT version=6.0.9 case=Q_es6_werror rc=0 wrong_count=0 typed=
+##[group]R_es6_default: em++ hello.cpp -O2 --bind -sEXPORT_ES6=1 --closure=1 -o r.mjs
+##[endgroup]
+RESULT version=6.0.9 case=R_es6_default rc=0 wrong_count=0 typed=
+##[group]S_es6_wall: em++ hello.cpp -O2 --bind -sEXPORT_ES6=1 --closure=1 -Wall -o s.mjs
+      4 [JSC_TYPE_MISMATCH]
+     14 [JSC_WRONG_ARGUMENT_COUNT]
+      3 Function FS.chmod: called with 2 argument(s)
+      3 Function FS.createDevice: called with 3 argument(s)
+      1 Function FS.init: called with 0 argument(s)
+      3 Function FS.mkdev: called with 2 argument(s)
+      1 Function FS.stat: called with 1 argument(s)
+      2 Function FS.write: called with 5 argument(s)
+      1 Function SYSCALLS.calculateAt: called with 2 argument(s)
+0 error(s), 18 warning(s), 62.7% typed
+
+building:WARNING: (rerun with -g1 linker flag for an unminified output)
+##[endgroup]
+RESULT version=6.0.9 case=S_es6_wall rc=0 wrong_count=14 typed=62.7% typed
+##[group]U_es6_minify0: em++ hello.cpp -O2 --bind -sEXPORT_ES6=1 --closure=1 -Wclosure --minify=0 -o u.mjs
+      4 [JSC_TYPE_MISMATCH]
+     14 [JSC_WRONG_ARGUMENT_COUNT]
+      3 Function FS.chmod: called with 2 argument(s)
+      3 Function FS.createDevice: called with 3 argument(s)
+      1 Function FS.init: called with 0 argument(s)
+      3 Function FS.mkdev: called with 2 argument(s)
+      1 Function FS.stat: called with 1 argument(s)
+      2 Function FS.write: called with 5 argument(s)
+      1 Function SYSCALLS.calculateAt: called with 2 argument(s)
+0 error(s), 18 warning(s), 62.7% typed
+
+building:WARNING: (rerun with EMCC_DEBUG=2 enabled to dump Closure input file)
+##[endgroup]
+RESULT version=6.0.9 case=U_es6_minify0 rc=0 wrong_count=14 typed=62.7% typed
+##[group]V_es6_plain_cpp: em++ hello2.cpp -O2 -sEXPORT_ES6=1 --closure=1 -Wclosure -o v.mjs
+      4 [JSC_TYPE_MISMATCH]
+     14 [JSC_WRONG_ARGUMENT_COUNT]
+      3 Function FS.chmod: called with 2 argument(s)
+      3 Function FS.createDevice: called with 3 argument(s)
+      1 Function FS.init: called with 0 argument(s)
+      3 Function FS.mkdev: called with 2 argument(s)
+      1 Function FS.stat: called with 1 argument(s)
+      2 Function FS.write: called with 5 argument(s)
+      1 Function SYSCALLS.calculateAt: called with 2 argument(s)
+0 error(s), 18 warning(s), 61.9% typed
+
+building:WARNING: (rerun with -g1 linker flag for an unminified output)
+##[endgroup]
+RESULT version=6.0.9 case=V_es6_plain_cpp rc=0 wrong_count=14 typed=61.9% typed
+##[group]W_es6_c_hello: emcc /emsdk/upstream/emscripten/test/hello_world.c -O2 -sEXPORT_ES6=1 --closure=1 -Wclosure -o w.mjs
+##[endgroup]
+RESULT version=6.0.9 case=W_es6_c_hello rc=0 wrong_count=0 typed=
+Post job cleanup.
+[command]/usr/bin/git version
+git version 2.55.0
+Temporarily overriding HOME='/home/runner/work/_temp/95a642f4-49b0-4ad8-a77d-c4989dfdba0e' before making global git config changes
+Adding repository directory to the temporary git global config as a safe directory
+[command]/usr/bin/git config --global --add safe.directory /home/runner/work/emsdk-wstring-convert/emsdk-wstring-convert
+[command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+[command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+[command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+http.https://github.com/.extraheader
+[command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+[command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+[command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+[command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Cleaning up orphan processes
