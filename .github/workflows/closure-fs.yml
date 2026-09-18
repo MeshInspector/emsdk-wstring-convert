@@ -30,14 +30,10 @@ jobs:
           echo "RESULT version=$VERSION case=fsshape rc=$rc wrong_count=$(grep -c JSC_WRONG_ARGUMENT_COUNT /tmp/js.log)"
           run() { name=$1; shift; echo "::group::$name: $*"; "$@" > /tmp/$name.log 2>&1; rc=$?; grep -o "\[JSC_[A-Z_]*\]" /tmp/$name.log | sort | uniq -c; grep -o "Function [A-Za-z_.0-9]*: called with [0-9]* argument(s)" /tmp/$name.log | sort | uniq -c; tail -3 /tmp/$name.log; echo "::endgroup::"; echo "RESULT version=$VERSION case=$name rc=$rc wrong_count=$(grep -c JSC_WRONG_ARGUMENT_COUNT /tmp/$name.log) typed=$(grep -o '[0-9.]*% typed' /tmp/$name.log | tail -1)"; }
           MESHLIB="--bind -sMODULARIZE=1 -sEXPORT_NAME=createMeshLib -sEXPORT_ES6=1 -sALLOW_MEMORY_GROWTH=1 -sEXIT_RUNTIME=0 -sINVOKE_RUN=0"
-          run I_es6               em++ hello.cpp -O2 --bind -sEXPORT_ES6=1 --closure=1 -Wclosure -o i.mjs
-          run P_es6_wall_werror   em++ hello.cpp -O2 --bind -sEXPORT_ES6=1 --closure=1 -Wall -Werror -o p.mjs
-          run Q_es6_werror        em++ hello.cpp -O2 --bind -sEXPORT_ES6=1 --closure=1 -Werror -o q.mjs
-          run R_es6_default       em++ hello.cpp -O2 --bind -sEXPORT_ES6=1 --closure=1 -o r.mjs
-          run S_es6_wall          em++ hello.cpp -O2 --bind -sEXPORT_ES6=1 --closure=1 -Wall -o s.mjs
-          run U_es6_minify0       em++ hello.cpp -O2 --bind -sEXPORT_ES6=1 --closure=1 -Wclosure --minify=0 -o u.mjs
-          run V_es6_plain_cpp     em++ hello2.cpp -O2 -sEXPORT_ES6=1 --closure=1 -Wclosure -o v.mjs
-          run W_es6_c_hello       emcc /emsdk/upstream/emscripten/test/hello_world.c -O2 -sEXPORT_ES6=1 --closure=1 -Wclosure -o w.mjs
+          run I_es6               em++ hello2.cpp -O2 -sEXPORT_ES6=1 --closure=1 -Wclosure -o i.mjs
+          OTHER=20240317.0.0; [ "$VERSION" = "5.0.7" ] && OTHER=20260726.0.0
+          echo "::group::swap closure to $OTHER"; (cd /emsdk/upstream/emscripten && npm install --no-save --no-audit --no-fund google-closure-compiler@$OTHER 2>&1 | tail -2; grep -o '"version": *"[^"]*"' node_modules/google-closure-compiler/package.json); echo "::endgroup::"
+          run X_es6_swapped_closure em++ hello2.cpp -O2 -sEXPORT_ES6=1 --closure=1 -Wclosure -o x.mjs
           exit 0
           SH
           docker run --rm -e VERSION=${{ matrix.version }} -v "$PWD:/src" -w /src $IMG bash run.sh
