@@ -31,12 +31,14 @@ jobs:
           run() { name=$1; shift; echo "::group::$name: $*"; "$@" > /tmp/$name.log 2>&1; rc=$?; grep -o "\[JSC_[A-Z_]*\]" /tmp/$name.log | sort | uniq -c; grep -o "Function [A-Za-z_.0-9]*: called with [0-9]* argument(s)" /tmp/$name.log | sort | uniq -c; tail -3 /tmp/$name.log; echo "::endgroup::"; echo "RESULT version=$VERSION case=$name rc=$rc wrong_count=$(grep -c JSC_WRONG_ARGUMENT_COUNT /tmp/$name.log) typed=$(grep -o '[0-9.]*% typed' /tmp/$name.log | tail -1)"; }
           MESHLIB="--bind -sMODULARIZE=1 -sEXPORT_NAME=createMeshLib -sEXPORT_ES6=1 -sALLOW_MEMORY_GROWTH=1 -sEXIT_RUNTIME=0 -sINVOKE_RUN=0"
           run A_plain_bind        em++ hello.cpp -O2 --bind --closure=1 -Wclosure -o a.js
-          run B_meshlib_flags     em++ hello.cpp -O2 $MESHLIB --closure=1 -Wclosure -o b.mjs
-          run C_meshlib_pthread   em++ hello.cpp -O2 $MESHLIB -pthread --closure=1 -Wclosure -o c.mjs
-          run D_meshlib_nodefs    em++ hello.cpp -O2 $MESHLIB -sFORCE_FILESYSTEM -lnodefs.js -lnoderawfs.js --closure=1 -Wclosure -o d.mjs
-          run E_meshlib_node_env  em++ hello.cpp -O2 $MESHLIB -sENVIRONMENT=node -sFORCE_FILESYSTEM -lnodefs.js --closure=1 -Wclosure -o e.mjs
-          run F_full_library      em++ hello.cpp -O2 --bind -sINCLUDE_FULL_LIBRARY -sFORCE_FILESYSTEM --closure=1 -Wclosure -o f.js
-          run G_meshlib_werror    em++ hello.cpp -O2 $MESHLIB -sFORCE_FILESYSTEM -lnodefs.js -Werror --closure=1 -o g.mjs
+          run H_modularize        em++ hello.cpp -O2 --bind -sMODULARIZE=1 --closure=1 -Wclosure -o h.js
+          run I_es6               em++ hello.cpp -O2 --bind -sEXPORT_ES6=1 --closure=1 -Wclosure -o i.mjs
+          run J_modularize_noc    em++ hello.cpp -O2 -sMODULARIZE=1 --closure=1 -Wclosure -o j.js
+          run K_memgrowth         em++ hello.cpp -O2 --bind -sALLOW_MEMORY_GROWTH=1 --closure=1 -Wclosure -o k.js
+          run L_norun             em++ hello.cpp -O2 --bind -sINVOKE_RUN=0 -sEXIT_RUNTIME=0 --closure=1 -Wclosure -o l.js
+          run M_modularize_g1     em++ hello.cpp -O2 --bind -sMODULARIZE=1 --closure=1 -Wclosure -g1 -o m.js
+          run N_modularize_wall_werror em++ hello.cpp -O2 --bind -sMODULARIZE=1 --closure=1 -Wall -Werror -o n.js
+          run O_modularize_werror em++ hello.cpp -O2 --bind -sMODULARIZE=1 --closure=1 -Werror -o o.js
           exit 0
           SH
           docker run --rm -e VERSION=${{ matrix.version }} -v "$PWD:/src" -w /src $IMG bash run.sh
